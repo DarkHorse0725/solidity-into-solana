@@ -1,0 +1,136 @@
+{
+    "methods": {
+        "IDOToken()": {
+            "stateMutability": "view",
+            "code": "function IDOToken() external view returns (contract IERC20withDec)",
+            "inputs": {},
+            "outputs": {
+                "_0": {
+                    "type": "contract IERC20withDec"
+                }
+            },
+            "notice": "Address of IDO token"
+        },
+        "PERCENTAGE_DENOMINATOR()": {
+            "stateMutability": "view",
+            "code": "function PERCENTAGE_DENOMINATOR() external view returns (uint16)",
+            "inputs": {},
+            "outputs": {
+                "_0": {
+                    "type": "uint16"
+                }
+            },
+            "notice": "Percentage denominator"
+        },
+        "TGEDate()": {
+            "stateMutability": "view",
+            "code": "function TGEDate() external view returns (uint64)",
+            "inputs": {},
+            "outputs": {
+                "_0": {
+                    "type": "uint64"
+                }
+            },
+            "notice": "Time for user to redeem IDO token"
+        },
+        "TGEPercentage()": {
+            "stateMutability": "view",
+            "code": "function TGEPercentage() external view returns (uint16)",
+            "inputs": {},
+            "outputs": {
+                "_0": {
+                    "type": "uint16"
+                }
+            },
+            "notice": "Percentage of IDO token amount of user, which can be redeemed after TGEDate"
+        },
+        "claimable()": {
+            "stateMutability": "view",
+            "code": "function claimable() external view returns (bool)",
+            "inputs": {},
+            "outputs": {
+                "_0": {
+                    "type": "bool"
+                }
+            },
+            "notice": "True if admin allow user to claim"
+        },
+        "emergencyCancelled()": {
+            "stateMutability": "view",
+            "code": "function emergencyCancelled() external view returns (bool)",
+            "inputs": {},
+            "outputs": {
+                "_0": {
+                    "type": "bool"
+                }
+            },
+            "details": "True if emergency cancelled"
+        },
+        "funded()": {
+            "stateMutability": "view",
+            "code": "function funded() external view returns (bool)",
+            "inputs": {},
+            "outputs": {
+                "_0": {
+                    "type": "bool"
+                }
+            },
+            "notice": "True if collaborator fund enough IDO token"
+        },
+        "numberOfVestingRelease()": {
+            "stateMutability": "view",
+            "code": "function numberOfVestingRelease() external view returns (uint256)",
+            "inputs": {},
+            "outputs": {
+                "_0": {
+                    "type": "uint256"
+                }
+            },
+            "notice": "Number of vesting release"
+        },
+        "vestingAmountInfo(address)": {
+            "stateMutability": "view",
+            "code": "function vestingAmountInfo(address) external view returns (uint256 totalAmount, uint256 claimedAmount)",
+            "inputs": {
+                "_0": {
+                    "type": "address"
+                }
+            },
+            "outputs": {
+                "totalAmount": {
+                    "type": "uint256"
+                },
+                "claimedAmount": {
+                    "type": "uint256"
+                }
+            },
+            "notice": "vesting info of each user"
+        },
+        "vestingCliff()": {
+            "stateMutability": "view",
+            "code": "function vestingCliff() external view returns (uint64)",
+            "inputs": {},
+            "outputs": {
+                "_0": {
+                    "type": "uint64"
+                }
+            },
+            "notice": "Vesting cliff"
+        },
+        "vestingFrequency()": {
+            "stateMutability": "view",
+            "code": "function vestingFrequency() external view returns (uint64)",
+            "inputs": {},
+            "outputs": {
+                "_0": {
+                    "type": "uint64"
+                }
+            },
+            "notice": "Vesting frequency"
+        }
+    },
+    "events": {},
+    "errors": {},
+    "path": "contracts/core",
+    "name": "VestingStorage"
+}

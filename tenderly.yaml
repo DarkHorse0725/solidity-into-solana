@@ -1,0 +1,5 @@
+projects: # running tenderly push will push the smart contracts to all of the provided projects
+  paid:
+    networks:
+      - "1" # mainnet
+      - "5" # goerli

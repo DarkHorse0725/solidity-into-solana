@@ -1,0 +1,126 @@
+{
+  "address": "0x5B4f235129ac152D15aF7c5797595851194228B1",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "InvalidTgePercentage",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "PERCENTAGE_DENOMINATOR",
+      "outputs": [
+        {
+          "internalType": "uint16",
+          "name": "",
+          "type": "uint16"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "totalAmount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "claimedAmount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint16",
+          "name": "TGEPercentage",
+          "type": "uint16"
+        },
+        {
+          "internalType": "uint64",
+          "name": "TGEDate",
+          "type": "uint64"
+        },
+        {
+          "internalType": "uint64",
+          "name": "vestingCliff",
+          "type": "uint64"
+        },
+        {
+          "internalType": "uint64",
+          "name": "vestingFrequency",
+          "type": "uint64"
+        },
+        {
+          "internalType": "uint256",
+          "name": "numberOfVestingRelease",
+          "type": "uint256"
+        }
+      ],
+      "name": "calculateClaimableAmount",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_TGEPercentage",
+          "type": "uint256"
+        }
+      ],
+      "name": "verifyVestingInfo",
+      "outputs": [],
+      "stateMutability": "pure",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0xaed549a7359916bf222819b4336959fdbd74ddf6f0c2328406a9a160e9d78a72",
+  "receipt": {
+    "to": null,
+    "from": "0x7aB363D60fdf281FDDb5E068FD3f8422c2C6aF9f",
+    "contractAddress": "0x5B4f235129ac152D15aF7c5797595851194228B1",
+    "transactionIndex": 114,
+    "gasUsed": "245888",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0x07d7c4e235f629a4093ccf2ec540134a2f1b3629ce9936ea8b92563c2536c300",
+    "transactionHash": "0xaed549a7359916bf222819b4336959fdbd74ddf6f0c2328406a9a160e9d78a72",
+    "logs": [],
+    "blockNumber": 36379454,
+    "cumulativeGasUsed": "9057785",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "numDeployments": 1,
+  "solcInputHash": "3f17f81d28b2277b875e901303fac68c",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.23+commit.f704f362\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"InvalidTgePercentage\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"PERCENTAGE_DENOMINATOR\",\"outputs\":[{\"internalType\":\"uint16\",\"name\":\"\",\"type\":\"uint16\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"totalAmount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"claimedAmount\",\"type\":\"uint256\"},{\"internalType\":\"uint16\",\"name\":\"TGEPercentage\",\"type\":\"uint16\"},{\"internalType\":\"uint64\",\"name\":\"TGEDate\",\"type\":\"uint64\"},{\"internalType\":\"uint64\",\"name\":\"vestingCliff\",\"type\":\"uint64\"},{\"internalType\":\"uint64\",\"name\":\"vestingFrequency\",\"type\":\"uint64\"},{\"internalType\":\"uint256\",\"name\":\"numberOfVestingRelease\",\"type\":\"uint256\"}],\"name\":\"calculateClaimableAmount\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_TGEPercentage\",\"type\":\"uint256\"}],\"name\":\"verifyVestingInfo\",\"outputs\":[],\"stateMutability\":\"pure\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"stateVariables\":{\"PERCENTAGE_DENOMINATOR\":{\"details\":\"Percentage denominator\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/logics/VestingLogic.sol\":\"VestingLogic\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/helpers/Errors.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity 0.8.23;\\n\\nlibrary Errors {\\n    error CallerNotAdmin();\\n    error CallerNotOwner();\\n    error ZeroAmountNotValid();\\n    error ZeroAddressNotValid();\\n    error InvalidTokenFeePercentage();\\n    error InvalidTgePercentage();\\n    error InvalidGalaxyPoolProportion();\\n    error InvalidEarlyAccessProportion();\\n    error InvalidTime();\\n    error InvalidSigner();\\n    error InvalidClaimableAmount();\\n    error NotInWhaleList();\\n    error NotInInvestorList();\\n    error NotEnoughAllowance();\\n    error NotFunded();\\n    error AlreadyClaimTotalAmount();\\n    error TimeOutToBuyIDOToken();\\n\\n    error ExceedMaxPurchaseAmountForUser();\\n    error ExceedTotalRaiseAmount();\\n    error ExceedMaxPurchaseAmountForKYCUser();\\n    error ExceedMaxPurchaseAmountForNonKYCUser();\\n    error ExceedMaxPurchaseAmountForEarlyAccess();\\n\\n    error NotAllowedToClaimIDOToken();\\n    error NotAllowedToClaimTokenFee();\\n    error NotAllowedToDoAfterTGEDate();\\n    error NotAllowedToClaimParticipationFee();\\n    error NotAllowedToWithdrawPurchasedAmount();\\n    error NotAllowedToFundAfterTGEDate();\\n    error NotAllowedToAllowInvestorToClaim();\\n    error NotAllowedToClaimPurchaseToken();\\n    error NotAllowedToTransferBBeforeTGEDate();\\n    error NotAllowedToTransferBeforeLockupTime();\\n    error NotAllowedToDoAfterEmergencyCancelled();\\n    error NotAllowedToCancelAfterLockupTime();\\n    error NotAllowedToExceedTotalRaiseAmount();\\n    error NotAllowedToFundBeforeCommunityTime();\\n\\n    error GalaxyParticipationFeePercentageNotInRange();\\n    error CrowdFundingParticipationFeePercentageNotInRange();\\n\\n    error NotAllowedToAdjustTGEDateExceedsAttempts();\\n\\n    error MaxPurchaseForKYCUserNotValid();\\n\\n    error PoolIsAlreadyFunded();\\n\\n    error NotAllowedToAdjustTGEDateTooFar();\\n\\n    error AlreadyPrivateFunded();\\n\\n    // string public constant CALLER_NOT_ADMIN = \\\"1\\\"; // 'The caller of the function is not an admin'\\n    // string public constant CALLER_NOT_OWNER = \\\"2\\\"; // 'The caller of the funtion is not an owner'\\n    // string public constant ZERO_AMOUNT_NOT_VALID = \\\"3\\\"; // 'Amount must be greater than 0'\\n    // string public constant ZERO_ADDRESS_NOT_VALID = \\\"4\\\"; // 'Zero address not valid'\\n    // string public constant INVALID_TOKEN_FEE_PERCENTAGE = \\\"5\\\"; // 'Token fee must not be greater than 100%'\\n    // string public constant INVALID_TGE_PERCENTAGE = \\\"6\\\"; // 'TGE must be smaller than or equal 100%'\\n    // string public constant INVALID_GALAXY_POOL_PROPORTION = \\\"7\\\"; // 'Galaxy pool proportion must be greater than 0% and smaller than 100%'\\n    // string public constant INVALID_EARLY_ACCESS_PROPORTION = \\\"8\\\"; // 'Early access proportion must be smaller than 100%'\\n    // string public constant INVALID_TIME = \\\"9\\\"; // 'Open time must be smaller than close time, close time for whale must not be greater than open time for community and not be greater than TGE date'\\n    // string public constant INVALID_SIGNER = \\\"10\\\"; // 'Signer does not have the right to approve'\\n    // string public constant INVALID_CLAIMABLE_AMOUNT = \\\"11\\\"; // 'Claimable amount must be greater than 0'\\n    // string public constant NOT_IN_WHALE_LIST = \\\"12\\\"; // 'Investor must be in whale list'\\n    // string public constant NOT_IN_INVESTOR_LIST = \\\"13\\\"; // 'Investor must be in the list'\\n    // string public constant NOT_ENOUGH_ALLOWANCE = \\\"14\\\"; // 'Investor need to approve or permit pool for their token before invest'\\n    // string public constant NOT_FUNDED = \\\"15\\\"; // 'Collaborator need to fund enough IDO token'\\n    // string public constant ALREADY_CLAIM_TOTAL_AMOUNT = \\\"16\\\"; // 'User already claim all of their token'\\n    // string public constant TIME_OUT_TO_BUY_IDO_TOKEN = \\\"17\\\"; // 'Time out for investor to buy IDO token'\\n    // string public constant EXCEED_MAX_PURCHASE_AMOUNT_FOR_USER = \\\"18\\\"; // 'Investor can not buy exceed allocated amount'\\n    // string public constant EXCEED_TOTAL_RAISE_AMOUNT = \\\"19\\\"; // 'Investor can not buy exceed total IDO token raise amount'\\n    // string public constant EXCEED_MAX_PURCHASE_AMOUNT_FOR_KYC_USER = \\\"20\\\"; // 'Investor who already kyced can not buy exceed allocated amount for KYCed user'\\n    // string public constant EXCEED_MAX_PURCHASE_AMOUNT_FOR_NOT_KYC_USER = \\\"21\\\"; // 'Investor who not kyc can not buy exceed allocated amount for not KYC user'\\n    // string public constant EXCEED_MAX_PURCHASE_AMOUNT_FOR_EARLY_ACCESS = \\\"22\\\"; // 'Investor can not buy exceed allocated amount for early access'\\n    // string public constant NOT_ALLOWED_TO_CLAIM_IDO_TOKEN = \\\"23\\\"; // 'Need admin's allowance to claim IDO token'\\n    // string public constant NOT_ALLOWED_TO_CLAIM_TOKEN_FEE = \\\"24\\\"; // 'Admin can claim only one single time'\\n    // string public constant NOT_ALLOWED_TO_DO_AFTER_TGE_DATE = \\\"25\\\"; // 'User must execute before TGE Date'\\n    // string public constant NOT_ALLOWED_TO_CLAIM_PARTICIPATION_FEE = \\\"26\\\"; // 'Admin can claim only one single time'\\n    // string public constant NOT_ALLOWED_TO_WITHDRAW_PURCHASED_AMOUNT = \\\"27\\\"; // 'Investor can withdraw their purchased amount if project failed and only one single time'\\n    // string public constant NOT_ALLOWED_TO_FUND_AFTER_TGE_DATE = \\\"28\\\"; // 'Collaborator must fund IDO token before TGE date'\\n    // string public constant NOT_ALLOWED_TO_ALLOW_INVESTOR_TO_CLAIM = \\\"29\\\"; // 'Admin can set claimable status to true if project success'\\n    // string public constant NOT_ALLOWED_TO_CLAIM_PURCHASE_TOKEN = \\\"30\\\"; // 'Collaborator can only claim fund (which exclude token fee) when project successes'\\n    // string public constant NOT_ALLOWED_TO_TRANSFER_BEFORE_TGE_DATE = \\\"31\\\"; // 'User can only claim or withdraw after TGE date'\\n    // string public constant NOT_ALLOWED_TO_TRANSFER_BEFORE_LOCKUP_TIME = \\\"32\\\"; // 'Admin can only claim token fee, participation fee; collaborator can only claim fund after lockup time'\\n    // string public constant NOT_ALLOWED_TO_DO_AFTER_EMERGENCY_CANCELLED = \\\"33\\\"; // 'Collaborator can withdraw redundant IDO token only,claim fund; admin can only claim token fee, participation fee if project is not emergency cancelled'\\n    // string public constant NOT_ALLOWED_TO_CANCEL_AFTER_LOCKUP_TIME = \\\"34\\\"; // 'Admin can only cancel pool before lockup time'\\n    // string public constant NOT_ALLOWED_TO_EXCEED_TOTAL_RAISE_AMOUNT = \\\"35\\\"; // Total Purchased Amount can't exceeds total raise amount\\n    // string public constant NOT_ALLOWED_TO_FUND_BEFORE_COMMUNITY_TIME = \\\"36\\\"; // Not allow to fund IDO token before Community Close Time\\n    // string public constant GALAXY_PARTICIPATION_FEE_PERCENTAGE_NOT_IN_THE_RANGE = \\\"37\\\";\\n    // string public constant CROWN_FUNDING_PARTICIPATION_FEE_PERCENTAGE_NOT_IN_THE_RANGE = \\\"38\\\";\\n    // string public constant NOT_ALLOWED_TO_ADJUST_TGE_DATE_EXCEEDS_ATTEMPTS = \\\"39\\\";\\n    // string public constant MAX_PURCHASE_FOR_KYC_USER_NOT_VALID = \\\"40\\\";\\n    // string public constant POOL_IS_ALREADY_FUNDED = \\\"41\\\";\\n    // string public constant NOT_ALLOWED_TO_ADJUST_TGE_DATE_TOO_FAR= \\\"42\\\";\\n    // string public constant ALREADY_PRIVATE_FUNDED=\\\"43\\\";\\n}\\n\",\"keccak256\":\"0x81107692558c8634b5da18a13e54d026725d0ae5e7184e0ad35f9d731df75a00\",\"license\":\"MIT\"},\"contracts/logics/VestingLogic.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity 0.8.23;\\n\\nimport {Errors} from \\\"../helpers/Errors.sol\\\";\\n\\nlibrary VestingLogic {\\n    /// @dev Percentage denominator\\n    uint16 public constant PERCENTAGE_DENOMINATOR = 10000;\\n\\n    function calculateClaimableAmount(\\n        uint totalAmount,\\n        uint claimedAmount,\\n        uint16 TGEPercentage,\\n        uint64 TGEDate,\\n        uint64 vestingCliff,\\n        uint64 vestingFrequency,\\n        uint numberOfVestingRelease\\n    ) external view returns (uint) {\\n        if (claimedAmount >= totalAmount) {\\n            return 0;\\n        }\\n        uint TGEAmount = (totalAmount * TGEPercentage) / PERCENTAGE_DENOMINATOR;\\n\\n        // In cliff time\\n        if (block.timestamp < TGEDate + vestingCliff) {\\n            return TGEAmount - claimedAmount;\\n        }\\n\\n        // After vesting duration\\n        uint releaseIndex = (block.timestamp - TGEDate - vestingCliff) /\\n            vestingFrequency +\\n            1;\\n        if (releaseIndex >= numberOfVestingRelease || vestingFrequency == 0) {\\n            return totalAmount - claimedAmount;\\n        }\\n\\n        // In vesting duration\\n        uint totalClaimableExceptTGEAmount = totalAmount - TGEAmount;\\n        return\\n            (releaseIndex * totalClaimableExceptTGEAmount) /\\n            numberOfVestingRelease +\\n            TGEAmount -\\n            claimedAmount;\\n    }\\n\\n    function verifyVestingInfo(uint _TGEPercentage) external pure {\\n        // require(\\n        //     _TGEPercentage <= PERCENTAGE_DENOMINATOR,\\n        //     Errors.INVALID_TGE_PERCENTAGE\\n        // );\\n        if (_TGEPercentage > PERCENTAGE_DENOMINATOR) {\\n            revert Errors.InvalidTgePercentage();\\n        }\\n    }\\n}\\n\",\"keccak256\":\"0x0744d1ea215395f23488c44947a3253b28483f6f9df49cd84c64bf6fb92bc876\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x61037b61003a600b82828239805160001a60731461002d57634e487b7160e01b600052600060045260246000fd5b30600052607381538281f3fe730000000000000000000000000000000000000000301460806040526004361061004b5760003560e01c80633954a8c714610050578063b3cd425414610076578063e206f93414610092575b600080fd5b61006361005e36600461020f565b6100a7565b6040519081526020015b60405180910390f35b61007f61271081565b60405161ffff909116815260200161006d565b6100a56100a0366004610289565b6101cc565b005b60008787106100b8575060006101c1565b60006127106100cb61ffff89168b6102b8565b6100d591906102d5565b90506100e185876102f7565b67ffffffffffffffff16421015610104576100fc888261031f565b9150506101c1565b60008467ffffffffffffffff168667ffffffffffffffff168867ffffffffffffffff1642610132919061031f565b61013c919061031f565b61014691906102d5565b610151906001610332565b9050838110158061016a575067ffffffffffffffff8516155b1561018257610179898b61031f565b925050506101c1565b600061018e838c61031f565b905089838661019d84866102b8565b6101a791906102d5565b6101b19190610332565b6101bb919061031f565b93505050505b979650505050505050565b6127108111156101ef57604051634ff3999160e11b815260040160405180910390fd5b50565b803567ffffffffffffffff8116811461020a57600080fd5b919050565b600080600080600080600060e0888a03121561022a57600080fd5b8735965060208801359550604088013561ffff8116811461024a57600080fd5b9450610258606089016101f2565b9350610266608089016101f2565b925061027460a089016101f2565b915060c0880135905092959891949750929550565b60006020828403121561029b57600080fd5b5035919050565b634e487b7160e01b600052601160045260246000fd5b80820281158282048414176102cf576102cf6102a2565b92915050565b6000826102f257634e487b7160e01b600052601260045260246000fd5b500490565b67ffffffffffffffff818116838216019080821115610318576103186102a2565b5092915050565b818103818111156102cf576102cf6102a2565b808201808211156102cf576102cf6102a256fea26469706673582212206541e036ccebdf5ed403855908c7beceed78e0ebb1772b9f1422f2fffdeb8f3f64736f6c63430008170033",
+  "deployedBytecode": "0x730000000000000000000000000000000000000000301460806040526004361061004b5760003560e01c80633954a8c714610050578063b3cd425414610076578063e206f93414610092575b600080fd5b61006361005e36600461020f565b6100a7565b6040519081526020015b60405180910390f35b61007f61271081565b60405161ffff909116815260200161006d565b6100a56100a0366004610289565b6101cc565b005b60008787106100b8575060006101c1565b60006127106100cb61ffff89168b6102b8565b6100d591906102d5565b90506100e185876102f7565b67ffffffffffffffff16421015610104576100fc888261031f565b9150506101c1565b60008467ffffffffffffffff168667ffffffffffffffff168867ffffffffffffffff1642610132919061031f565b61013c919061031f565b61014691906102d5565b610151906001610332565b9050838110158061016a575067ffffffffffffffff8516155b1561018257610179898b61031f565b925050506101c1565b600061018e838c61031f565b905089838661019d84866102b8565b6101a791906102d5565b6101b19190610332565b6101bb919061031f565b93505050505b979650505050505050565b6127108111156101ef57604051634ff3999160e11b815260040160405180910390fd5b50565b803567ffffffffffffffff8116811461020a57600080fd5b919050565b600080600080600080600060e0888a03121561022a57600080fd5b8735965060208801359550604088013561ffff8116811461024a57600080fd5b9450610258606089016101f2565b9350610266608089016101f2565b925061027460a089016101f2565b915060c0880135905092959891949750929550565b60006020828403121561029b57600080fd5b5035919050565b634e487b7160e01b600052601160045260246000fd5b80820281158282048414176102cf576102cf6102a2565b92915050565b6000826102f257634e487b7160e01b600052601260045260246000fd5b500490565b67ffffffffffffffff818116838216019080821115610318576103186102a2565b5092915050565b818103818111156102cf576102cf6102a2565b808201808211156102cf576102cf6102a256fea26469706673582212206541e036ccebdf5ed403855908c7beceed78e0ebb1772b9f1422f2fffdeb8f3f64736f6c63430008170033",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "stateVariables": {
+      "PERCENTAGE_DENOMINATOR": {
+        "details": "Percentage denominator"
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [],
+    "types": null
+  }
+}

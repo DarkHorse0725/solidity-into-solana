@@ -1,0 +1,233 @@
+{
+    "methods": {
+        "DEFAULT_ADMIN_ROLE()": {
+            "stateMutability": "view",
+            "code": "function DEFAULT_ADMIN_ROLE() external view returns (bytes32)",
+            "inputs": {},
+            "outputs": {
+                "_0": {
+                    "type": "bytes32"
+                }
+            }
+        },
+        "OWNER_ROLE()": {
+            "stateMutability": "view",
+            "code": "function OWNER_ROLE() external view returns (bytes32)",
+            "inputs": {},
+            "outputs": {
+                "_0": {
+                    "type": "bytes32"
+                }
+            },
+            "notice": "keccak256(\"OWNER_ROLE\")"
+        },
+        "__BasePausable__init(address)": {
+            "stateMutability": "nonpayable",
+            "code": "function __BasePausable__init(address owner) external nonpayable",
+            "inputs": {
+                "owner": {
+                    "type": "address"
+                }
+            },
+            "outputs": {}
+        },
+        "getRoleAdmin(bytes32)": {
+            "stateMutability": "view",
+            "code": "function getRoleAdmin(bytes32 role) external view returns (bytes32)",
+            "inputs": {
+                "role": {
+                    "type": "bytes32"
+                }
+            },
+            "outputs": {
+                "_0": {
+                    "type": "bytes32"
+                }
+            },
+            "details": "Returns the admin role that controls `role`. See {grantRole} and {revokeRole}. To change a role's admin, use {_setRoleAdmin}."
+        },
+        "grantRole(bytes32,address)": {
+            "stateMutability": "nonpayable",
+            "code": "function grantRole(bytes32 role, address account) external nonpayable",
+            "inputs": {
+                "role": {
+                    "type": "bytes32"
+                },
+                "account": {
+                    "type": "address"
+                }
+            },
+            "outputs": {},
+            "details": "Grants `role` to `account`. If `account` had not been already granted `role`, emits a {RoleGranted} event. Requirements: - the caller must have ``role``'s admin role. May emit a {RoleGranted} event."
+        },
+        "hasRole(bytes32,address)": {
+            "stateMutability": "view",
+            "code": "function hasRole(bytes32 role, address account) external view returns (bool)",
+            "inputs": {
+                "role": {
+                    "type": "bytes32"
+                },
+                "account": {
+                    "type": "address"
+                }
+            },
+            "outputs": {
+                "_0": {
+                    "type": "bool"
+                }
+            },
+            "details": "Returns `true` if `account` has been granted `role`."
+        },
+        "isOwner(address)": {
+            "stateMutability": "view",
+            "code": "function isOwner(address sender) external view returns (bool)",
+            "inputs": {
+                "sender": {
+                    "type": "address"
+                }
+            },
+            "outputs": {
+                "_0": {
+                    "type": "bool"
+                }
+            }
+        },
+        "paused()": {
+            "stateMutability": "view",
+            "code": "function paused() external view returns (bool)",
+            "inputs": {},
+            "outputs": {
+                "_0": {
+                    "type": "bool"
+                }
+            },
+            "details": "Returns true if the contract is paused, and false otherwise."
+        },
+        "renounceRole(bytes32,address)": {
+            "stateMutability": "nonpayable",
+            "code": "function renounceRole(bytes32 role, address account) external nonpayable",
+            "inputs": {
+                "role": {
+                    "type": "bytes32"
+                },
+                "account": {
+                    "type": "address"
+                }
+            },
+            "outputs": {},
+            "details": "Revokes `role` from the calling account. Roles are often managed via {grantRole} and {revokeRole}: this function's purpose is to provide a mechanism for accounts to lose their privileges if they are compromised (such as when a trusted device is misplaced). If the calling account had been revoked `role`, emits a {RoleRevoked} event. Requirements: - the caller must be `account`. May emit a {RoleRevoked} event."
+        },
+        "revokeRole(bytes32,address)": {
+            "stateMutability": "nonpayable",
+            "code": "function revokeRole(bytes32 role, address account) external nonpayable",
+            "inputs": {
+                "role": {
+                    "type": "bytes32"
+                },
+                "account": {
+                    "type": "address"
+                }
+            },
+            "outputs": {},
+            "details": "Revokes `role` from `account`. If `account` had been granted `role`, emits a {RoleRevoked} event. Requirements: - the caller must have ``role``'s admin role. May emit a {RoleRevoked} event."
+        },
+        "supportsInterface(bytes4)": {
+            "stateMutability": "view",
+            "code": "function supportsInterface(bytes4 interfaceId) external view returns (bool)",
+            "inputs": {
+                "interfaceId": {
+                    "type": "bytes4"
+                }
+            },
+            "outputs": {
+                "_0": {
+                    "type": "bool"
+                }
+            },
+            "details": "See {IERC165-supportsInterface}."
+        }
+    },
+    "events": {
+        "Initialized": {
+            "code": "event Initialized(uint8 version)",
+            "inputs": {
+                "version": {
+                    "type": "uint8",
+                    "indexed": false
+                }
+            }
+        },
+        "Paused": {
+            "code": "event Paused(address account)",
+            "inputs": {
+                "account": {
+                    "type": "address",
+                    "indexed": false
+                }
+            }
+        },
+        "RoleAdminChanged": {
+            "code": "event RoleAdminChanged(bytes32 indexed role, bytes32 indexed previousAdminRole, bytes32 indexed newAdminRole)",
+            "inputs": {
+                "role": {
+                    "type": "bytes32",
+                    "indexed": true
+                },
+                "previousAdminRole": {
+                    "type": "bytes32",
+                    "indexed": true
+                },
+                "newAdminRole": {
+                    "type": "bytes32",
+                    "indexed": true
+                }
+            }
+        },
+        "RoleGranted": {
+            "code": "event RoleGranted(bytes32 indexed role, address indexed account, address indexed sender)",
+            "inputs": {
+                "role": {
+                    "type": "bytes32",
+                    "indexed": true
+                },
+                "account": {
+                    "type": "address",
+                    "indexed": true
+                },
+                "sender": {
+                    "type": "address",
+                    "indexed": true
+                }
+            }
+        },
+        "RoleRevoked": {
+            "code": "event RoleRevoked(bytes32 indexed role, address indexed account, address indexed sender)",
+            "inputs": {
+                "role": {
+                    "type": "bytes32",
+                    "indexed": true
+                },
+                "account": {
+                    "type": "address",
+                    "indexed": true
+                },
+                "sender": {
+                    "type": "address",
+                    "indexed": true
+                }
+            }
+        },
+        "Unpaused": {
+            "code": "event Unpaused(address account)",
+            "inputs": {
+                "account": {
+                    "type": "address",
+                    "indexed": false
+                }
+            }
+        }
+    },
+    "errors": {},
+    "path": "contracts/core",
+    "name": "BasePausable"
+}

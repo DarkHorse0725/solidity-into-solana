@@ -1,0 +1,725 @@
+{
+  "address": "0x17B890C923A99b937453c7FC6D1E95eb95F3CC7B",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint8",
+          "name": "version",
+          "type": "uint8"
+        }
+      ],
+      "name": "Initialized",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "Paused",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "bytes32",
+          "name": "poolInfoHash",
+          "type": "bytes32"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "pool",
+          "type": "address"
+        }
+      ],
+      "name": "PoolCreated",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "role",
+          "type": "bytes32"
+        },
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "previousAdminRole",
+          "type": "bytes32"
+        },
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "newAdminRole",
+          "type": "bytes32"
+        }
+      ],
+      "name": "RoleAdminChanged",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "role",
+          "type": "bytes32"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "sender",
+          "type": "address"
+        }
+      ],
+      "name": "RoleGranted",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "role",
+          "type": "bytes32"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "sender",
+          "type": "address"
+        }
+      ],
+      "name": "RoleRevoked",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "Unpaused",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "oldPoolImplementation",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newPoolImplementation",
+          "type": "address"
+        }
+      ],
+      "name": "UpdatePoolImplementation",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "oldVestingImplementation",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newVestingImplementation",
+          "type": "address"
+        }
+      ],
+      "name": "UpdateVestingImplementation",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "sender",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "vesting",
+          "type": "address"
+        }
+      ],
+      "name": "VestingCreated",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "DEFAULT_ADMIN_ROLE",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "OWNER_ROLE",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        }
+      ],
+      "name": "__BasePausable__init",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address[2]",
+          "name": "addrs",
+          "type": "address[2]"
+        },
+        {
+          "internalType": "uint256[18]",
+          "name": "uints",
+          "type": "uint256[18]"
+        },
+        {
+          "internalType": "uint256",
+          "name": "dbProjectId",
+          "type": "uint256"
+        }
+      ],
+      "name": "createPool",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "pool",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "createVesting",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "role",
+          "type": "bytes32"
+        }
+      ],
+      "name": "getRoleAdmin",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "role",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "grantRole",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "role",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "hasRole",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_poolImplementationAddress",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_vestingImplementationAddress",
+          "type": "address"
+        }
+      ],
+      "name": "initialize",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "sender",
+          "type": "address"
+        }
+      ],
+      "name": "isOwner",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "paused",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "poolImplementationAddress",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "role",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "renounceRole",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "role",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "revokeRole",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_poolImplementationAddress",
+          "type": "address"
+        }
+      ],
+      "name": "setPoolImplementation",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_vestingImplementationAddress",
+          "type": "address"
+        }
+      ],
+      "name": "setVestingImplementation",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes4",
+          "name": "interfaceId",
+          "type": "bytes4"
+        }
+      ],
+      "name": "supportsInterface",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "vestingImplementationAddress",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0x52131089cc90e481aac8948dbfa9ce24a210a5d73f1eb764e4fff0475f46c942",
+  "receipt": {
+    "to": null,
+    "from": "0x9460b481366b7462af4f7991d430e5eB97FAAEB5",
+    "contractAddress": "0x17B890C923A99b937453c7FC6D1E95eb95F3CC7B",
+    "transactionIndex": 3,
+    "gasUsed": "1086128",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0xc9f088364fe599b40c9e04aca02c950918ed83f651f6166f3dcd4b0b4cf94f94",
+    "transactionHash": "0x52131089cc90e481aac8948dbfa9ce24a210a5d73f1eb764e4fff0475f46c942",
+    "logs": [],
+    "blockNumber": 30821121,
+    "cumulativeGasUsed": "1255035",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "numDeployments": 1,
+  "solcInputHash": "ef923eccb63327838caf0616ffa15c8e",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.10+commit.fc410830\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint8\",\"name\":\"version\",\"type\":\"uint8\"}],\"name\":\"Initialized\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"Paused\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"poolInfoHash\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"pool\",\"type\":\"address\"}],\"name\":\"PoolCreated\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"previousAdminRole\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"newAdminRole\",\"type\":\"bytes32\"}],\"name\":\"RoleAdminChanged\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"}],\"name\":\"RoleGranted\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"}],\"name\":\"RoleRevoked\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"Unpaused\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"oldPoolImplementation\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newPoolImplementation\",\"type\":\"address\"}],\"name\":\"UpdatePoolImplementation\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"oldVestingImplementation\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newVestingImplementation\",\"type\":\"address\"}],\"name\":\"UpdateVestingImplementation\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"vesting\",\"type\":\"address\"}],\"name\":\"VestingCreated\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"DEFAULT_ADMIN_ROLE\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"OWNER_ROLE\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"}],\"name\":\"__BasePausable__init\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address[2]\",\"name\":\"addrs\",\"type\":\"address[2]\"},{\"internalType\":\"uint256[18]\",\"name\":\"uints\",\"type\":\"uint256[18]\"},{\"internalType\":\"uint256\",\"name\":\"dbProjectId\",\"type\":\"uint256\"}],\"name\":\"createPool\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"pool\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"createVesting\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"}],\"name\":\"getRoleAdmin\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"grantRole\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"hasRole\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_poolImplementationAddress\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_vestingImplementationAddress\",\"type\":\"address\"}],\"name\":\"initialize\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"}],\"name\":\"isOwner\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"paused\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"poolImplementationAddress\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"renounceRole\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"revokeRole\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_poolImplementationAddress\",\"type\":\"address\"}],\"name\":\"setPoolImplementation\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_vestingImplementationAddress\",\"type\":\"address\"}],\"name\":\"setVestingImplementation\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"interfaceId\",\"type\":\"bytes4\"}],\"name\":\"supportsInterface\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"vestingImplementationAddress\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"createPool(address[2],uint256[18],uint256)\":{\"details\":\"Only has one pool address respectively for one input params\",\"params\":{\"addrs\":\"Array of address includes: - address of IDO token, - address of purchase token\",\"dbProjectId\":\"Project Id in database\",\"uints\":\"Array of pool information includes: - max purchase amount for KYC user, - max purchase amount for Not KYC user, - token project fee percentage, // will be sent to admin if success or investor in vice versa - galaxy participation fee percentage, // will be sent to admin - crowdfunding participation fee percentage, // will be sent to admin - galaxy pool proportion, (ratio with all project) - early access proportion, (ratio with only crowdfunding pool) - total raise amount, - whale open time, - whale duration, - community duration, - rate of IDO token (based on formula in README), - decimal of IDO token (based on formula in README, is different from decimals in contract of IDO token), - TGE date, - TGE percentage, - vesting cliff, - vesting frequency, - number of vesting release\"},\"returns\":{\"pool\":\"Address of new pool\"}},\"getRoleAdmin(bytes32)\":{\"details\":\"Returns the admin role that controls `role`. See {grantRole} and {revokeRole}. To change a role's admin, use {_setRoleAdmin}.\"},\"grantRole(bytes32,address)\":{\"details\":\"Grants `role` to `account`. If `account` had not been already granted `role`, emits a {RoleGranted} event. Requirements: - the caller must have ``role``'s admin role. May emit a {RoleGranted} event.\"},\"hasRole(bytes32,address)\":{\"details\":\"Returns `true` if `account` has been granted `role`.\"},\"initialize(address,address)\":{\"details\":\"Called only once\",\"params\":{\"_poolImplementationAddress\":\"Address of pool implementation\"}},\"paused()\":{\"details\":\"Returns true if the contract is paused, and false otherwise.\"},\"renounceRole(bytes32,address)\":{\"details\":\"Revokes `role` from the calling account. Roles are often managed via {grantRole} and {revokeRole}: this function's purpose is to provide a mechanism for accounts to lose their privileges if they are compromised (such as when a trusted device is misplaced). If the calling account had been revoked `role`, emits a {RoleRevoked} event. Requirements: - the caller must be `account`. May emit a {RoleRevoked} event.\"},\"revokeRole(bytes32,address)\":{\"details\":\"Revokes `role` from `account`. If `account` had been granted `role`, emits a {RoleRevoked} event. Requirements: - the caller must have ``role``'s admin role. May emit a {RoleRevoked} event.\"},\"setPoolImplementation(address)\":{\"details\":\"Only admin can can call it\",\"params\":{\"_poolImplementationAddress\":\"Address of new pool implementation\"}},\"setVestingImplementation(address)\":{\"details\":\"Only admin can can call it\",\"params\":{\"_vestingImplementationAddress\":\"Address of new vesting implementation\"}},\"supportsInterface(bytes4)\":{\"details\":\"See {IERC165-supportsInterface}.\"}},\"stateVariables\":{\"poolImplementationAddress\":{\"details\":\"Address of pool implementation\"},\"vestingImplementationAddress\":{\"details\":\"Address of vesting implementation\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"OWNER_ROLE()\":{\"notice\":\"keccak256(\\\"OWNER_ROLE\\\")\"},\"createPool(address[2],uint256[18],uint256)\":{\"notice\":\"Create new pool. One pool has 2 sub-pool: galaxy pool and crowfunding pool, with 2 different participation fee. In crowfunding pool, there is a part for WHALE to buy early (called EARLY ACCESS) and another for NORMAL user to buy (called NORMAL ACCESS). Duration of galaxy pool and EARLY ACCESS are same and before duration of NORMAL ACCESS. There are 3 types of profit: participation fee, token fee and collaborator profit. Token fee + Collaborator profit = total raise amount (IDO token) * price = purchased amount (purchase token) Investors need to pay purchase amount and participation fee If project is success (not be cancelled by admin or funded enough IDO token),  - System's admin claims participation fee and token fee    (call pool.claimParticipationFee(), pool.claimTokenFee())  - Collaborator claims collaborator profit (purchased amount - token fee) based on vesting rule    (call pool.claimProfit())  - Investors claim IDO token based on vesting rule  - Collaborator withdraws redundant IDO token    (call pool.withdrawRedundantIDOToken()) If project is fail (cancelled or not be funded enough IDO token) (of course before TGE date)  - System's admin claims participation fee    (call pool.claimParticipationFee())  - Investors withdraw purchased amount    (call pool.withdrawPurchasedAmount())  - Collaborator withdraws funded IDO token    (call pool.withdrawRedundantIDOToken())\"},\"initialize(address,address)\":{\"notice\":\"Initialize pool factory with address of pool implementation\"},\"setPoolImplementation(address)\":{\"notice\":\"Set or change address of pool implementation\"},\"setVestingImplementation(address)\":{\"notice\":\"Set or change address of vesting implementation\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/core/IgnitionFactory.sol\":\"IgnitionFactory\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":100},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts/token/ERC20/IERC20.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// OpenZeppelin Contracts (last updated v4.6.0) (token/ERC20/IERC20.sol)\\n\\npragma solidity ^0.8.0;\\n\\n/**\\n * @dev Interface of the ERC20 standard as defined in the EIP.\\n */\\ninterface IERC20 {\\n    /**\\n     * @dev Emitted when `value` tokens are moved from one account (`from`) to\\n     * another (`to`).\\n     *\\n     * Note that `value` may be zero.\\n     */\\n    event Transfer(address indexed from, address indexed to, uint256 value);\\n\\n    /**\\n     * @dev Emitted when the allowance of a `spender` for an `owner` is set by\\n     * a call to {approve}. `value` is the new allowance.\\n     */\\n    event Approval(address indexed owner, address indexed spender, uint256 value);\\n\\n    /**\\n     * @dev Returns the amount of tokens in existence.\\n     */\\n    function totalSupply() external view returns (uint256);\\n\\n    /**\\n     * @dev Returns the amount of tokens owned by `account`.\\n     */\\n    function balanceOf(address account) external view returns (uint256);\\n\\n    /**\\n     * @dev Moves `amount` tokens from the caller's account to `to`.\\n     *\\n     * Returns a boolean value indicating whether the operation succeeded.\\n     *\\n     * Emits a {Transfer} event.\\n     */\\n    function transfer(address to, uint256 amount) external returns (bool);\\n\\n    /**\\n     * @dev Returns the remaining number of tokens that `spender` will be\\n     * allowed to spend on behalf of `owner` through {transferFrom}. This is\\n     * zero by default.\\n     *\\n     * This value changes when {approve} or {transferFrom} are called.\\n     */\\n    function allowance(address owner, address spender) external view returns (uint256);\\n\\n    /**\\n     * @dev Sets `amount` as the allowance of `spender` over the caller's tokens.\\n     *\\n     * Returns a boolean value indicating whether the operation succeeded.\\n     *\\n     * IMPORTANT: Beware that changing an allowance with this method brings the risk\\n     * that someone may use both the old and the new allowance by unfortunate\\n     * transaction ordering. One possible solution to mitigate this race\\n     * condition is to first reduce the spender's allowance to 0 and set the\\n     * desired value afterwards:\\n     * https://github.com/ethereum/EIPs/issues/20#issuecomment-263524729\\n     *\\n     * Emits an {Approval} event.\\n     */\\n    function approve(address spender, uint256 amount) external returns (bool);\\n\\n    /**\\n     * @dev Moves `amount` tokens from `from` to `to` using the\\n     * allowance mechanism. `amount` is then deducted from the caller's\\n     * allowance.\\n     *\\n     * Returns a boolean value indicating whether the operation succeeded.\\n     *\\n     * Emits a {Transfer} event.\\n     */\\n    function transferFrom(\\n        address from,\\n        address to,\\n        uint256 amount\\n    ) external returns (bool);\\n}\\n\",\"keccak256\":\"0x9750c6b834f7b43000631af5cc30001c5f547b3ceb3635488f140f60e897ea6b\",\"license\":\"MIT\"},\"contracts/core/BasePausable.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity 0.8.10;\\n\\nimport \\\"../utils/AccessControl.sol\\\";\\nimport \\\"../utils/Pausable.sol\\\";\\nimport \\\"../utils/Initializable.sol\\\";\\nimport \\\"../utils/ReentrancyGuard.sol\\\";\\nimport {Errors} from \\\"../helpers/Errors.sol\\\";\\n\\ncontract BasePausable is\\n    AccessControl,\\n    Pausable,\\n    Initializable,\\n    ReentrancyGuard\\n{\\n    /// @notice keccak256(\\\"OWNER_ROLE\\\")\\n    bytes32 public constant OWNER_ROLE =\\n        0xb19546dff01e856fb3f010c267a7b1c60363cf8a4664e21cc89c26224620214e;\\n\\n    modifier onlyOwner() {\\n        require(isOwner(_msgSender()), Errors.CALLER_NOT_OWNER);\\n        _;\\n    }\\n\\n    function __BasePausable__init(address owner) public onlyInitializing {\\n        require(owner != address(0), Errors.ZERO_ADDRESS_NOT_VALID);\\n\\n        _setupRole(OWNER_ROLE, owner);\\n        _setRoleAdmin(OWNER_ROLE, OWNER_ROLE);\\n    }\\n\\n    function isOwner(address sender) public view returns (bool) {\\n        return hasRole(OWNER_ROLE, sender);\\n    }\\n}\\n\",\"keccak256\":\"0xd60b49f9757e45b97ebbd1835ddec35533cece06240624aeafbe71f8e632940a\",\"license\":\"MIT\"},\"contracts/core/IgnitionFactory.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity 0.8.10;\\n\\nimport \\\"./BasePausable.sol\\\";\\nimport \\\"../libraries/Clones.sol\\\";\\nimport \\\"../interfaces/IPool.sol\\\";\\nimport \\\"../interfaces/IIgnitionFactory.sol\\\";\\nimport \\\"../interfaces/IVesting.sol\\\";\\nimport \\\"../interfaces/IIgnitionFactory.sol\\\";\\n\\ncontract IgnitionFactory is BasePausable {\\n    /// @dev Address of pool implementation\\n    address public poolImplementationAddress;\\n\\n    /// @dev Address of vesting implementation\\n    address public vestingImplementationAddress;\\n\\n    // ============================== EVENT ==============================\\n\\n    event UpdatePoolImplementation(\\n        address indexed oldPoolImplementation,\\n        address indexed newPoolImplementation\\n    );\\n\\n    event UpdateVestingImplementation(\\n        address indexed oldVestingImplementation,\\n        address indexed newVestingImplementation\\n    );\\n\\n    event PoolCreated(bytes32 poolInfoHash, address pool);\\n\\n    event VestingCreated(address sender, address vesting);\\n\\n    // ============================== EXTERNAL FUNCTION ==============================\\n\\n    /**\\n     * @notice Initialize pool factory with address of pool implementation\\n     * @dev Called only once\\n     * @param _poolImplementationAddress Address of pool implementation\\n     */\\n    function initialize(\\n        address _poolImplementationAddress,\\n        address _vestingImplementationAddress\\n    ) external initializer {\\n        poolImplementationAddress = _poolImplementationAddress;\\n        vestingImplementationAddress = _vestingImplementationAddress;\\n        _setupRole(OWNER_ROLE, _msgSender());\\n        _setRoleAdmin(OWNER_ROLE, OWNER_ROLE);\\n    }\\n\\n    /**\\n     * @notice Set or change address of pool implementation\\n     * @dev Only admin can can call it\\n     * @param _poolImplementationAddress Address of new pool implementation\\n     */\\n    function setPoolImplementation(\\n        address _poolImplementationAddress\\n    ) external onlyOwner {\\n        _validAddress(_poolImplementationAddress);\\n        address oldPoolImplementation = poolImplementationAddress;\\n        poolImplementationAddress = _poolImplementationAddress;\\n        emit UpdatePoolImplementation(\\n            oldPoolImplementation,\\n            _poolImplementationAddress\\n        );\\n    }\\n\\n    /**\\n     * @notice Set or change address of vesting implementation\\n     * @dev Only admin can can call it\\n     * @param _vestingImplementationAddress Address of new vesting implementation\\n     */\\n    function setVestingImplementation(\\n        address _vestingImplementationAddress\\n    ) external onlyOwner {\\n        _validAddress(_vestingImplementationAddress);\\n        address oldVestingImplementation = vestingImplementationAddress;\\n        vestingImplementationAddress = _vestingImplementationAddress;\\n        emit UpdateVestingImplementation(\\n            oldVestingImplementation,\\n            _vestingImplementationAddress\\n        );\\n    }\\n\\n    /**\\n     * @notice Create new pool. One pool has 2 sub-pool: galaxy pool and crowfunding pool, with 2 different participation fee.\\n     * In crowfunding pool, there is a part for WHALE to buy early (called EARLY ACCESS) and another for NORMAL user to buy\\n     * (called NORMAL ACCESS). Duration of galaxy pool and EARLY ACCESS are same and before duration of NORMAL ACCESS.\\n     *\\n     * There are 3 types of profit: participation fee, token fee and collaborator profit.\\n     * Token fee + Collaborator profit = total raise amount (IDO token) * price = purchased amount (purchase token)\\n     * Investors need to pay purchase amount and participation fee\\n     *\\n     * If project is success (not be cancelled by admin or funded enough IDO token),\\n     *  - System's admin claims participation fee and token fee\\n     *    (call pool.claimParticipationFee(), pool.claimTokenFee())\\n     *  - Collaborator claims collaborator profit (purchased amount - token fee) based on vesting rule\\n     *    (call pool.claimProfit())\\n     *  - Investors claim IDO token based on vesting rule\\n     *  - Collaborator withdraws redundant IDO token\\n     *    (call pool.withdrawRedundantIDOToken())\\n     *\\n     * If project is fail (cancelled or not be funded enough IDO token) (of course before TGE date)\\n     *  - System's admin claims participation fee\\n     *    (call pool.claimParticipationFee())\\n     *  - Investors withdraw purchased amount\\n     *    (call pool.withdrawPurchasedAmount())\\n     *  - Collaborator withdraws funded IDO token\\n     *    (call pool.withdrawRedundantIDOToken())\\n     *\\n     * @dev Only has one pool address respectively for one input params\\n     * @param addrs Array of address includes:\\n     * - address of IDO token,\\n     * - address of purchase token\\n     * @param uints Array of pool information includes:\\n     * - max purchase amount for KYC user,\\n     * - max purchase amount for Not KYC user,\\n     * - token project fee percentage, // will be sent to admin if success or investor in vice versa\\n     * - galaxy participation fee percentage, // will be sent to admin\\n     * - crowdfunding participation fee percentage, // will be sent to admin\\n     * - galaxy pool proportion, (ratio with all project)\\n     * - early access proportion, (ratio with only crowdfunding pool)\\n     * - total raise amount,\\n     * - whale open time,\\n     * - whale duration,\\n     * - community duration,\\n     * - rate of IDO token (based on formula in README),\\n     * - decimal of IDO token (based on formula in README, is different from decimals in contract of IDO token),\\n     * - TGE date,\\n     * - TGE percentage,\\n     * - vesting cliff,\\n     * - vesting frequency,\\n     * - number of vesting release\\n     * @param dbProjectId Project Id in database\\n     * @return pool Address of new pool\\n     */\\n    function createPool(\\n        address[2] memory addrs,\\n        uint[18] memory uints,\\n        uint dbProjectId\\n    ) external returns (address pool) {\\n        bytes32 salt = keccak256(\\n            abi.encode(addrs, uints, _msgSender(), dbProjectId)\\n        );\\n\\n        pool = Clones.cloneDeterministic(poolImplementationAddress, salt);\\n        IPool(pool).initialize(addrs, uints, _msgSender());\\n\\n        bytes32 poolInfoHash = keccak256(abi.encode(addrs, uints, dbProjectId));\\n\\n        emit PoolCreated(poolInfoHash, pool);\\n\\n        return pool;\\n    }\\n\\n    function createVesting() external returns (address) {\\n        address vesting = Clones.clone(vestingImplementationAddress);\\n        emit VestingCreated(_msgSender(), vesting);\\n        return vesting;\\n    }\\n\\n    // ============================== INTERNAL FUNCTION ==============================\\n\\n    /**\\n     * @dev Check whether or not an address is zero address\\n     * @param _address An address\\n     */\\n    function _validAddress(address _address) internal pure {\\n        require(_address != address(0), Errors.ZERO_ADDRESS_NOT_VALID);\\n    }\\n\\n    /**\\n     * @dev Check whether or not an amount greater than 0\\n     * @param _amount An amount\\n     */\\n    function _validAmount(uint _amount) internal pure {\\n        require(_amount != 0, Errors.ZERO_AMOUNT_NOT_VALID);\\n    }\\n}\\n\",\"keccak256\":\"0x30d0761059a4f45567fa29a382b70cf3aeb5b1b744149ed2e90ec3d64015aa91\",\"license\":\"MIT\"},\"contracts/helpers/Errors.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity 0.8.10;\\n\\nlibrary Errors {\\n    string public constant CALLER_NOT_ADMIN = \\\"1\\\"; // 'The caller of the function is not an admin'\\n    string public constant CALLER_NOT_OWNER = \\\"2\\\"; // 'The caller of the funtion is not an owner'\\n    string public constant ZERO_AMOUNT_NOT_VALID = \\\"3\\\"; // 'Amount must be greater than 0'\\n    string public constant ZERO_ADDRESS_NOT_VALID = \\\"4\\\"; // 'Zero address not valid'\\n    string public constant INVALID_TOKEN_FEE_PERCENTAGE = \\\"5\\\"; // 'Token fee must not be greater than 100%'\\n    string public constant INVALID_TGE_PERCENTAGE = \\\"6\\\"; // 'TGE must be smaller than or equal 100%'\\n    string public constant INVALID_GALAXY_POOL_PROPORTION = \\\"7\\\"; // 'Galaxy pool proportion must be greater than 0% and smaller than 100%'\\n    string public constant INVALID_EARLY_ACCESS_PROPORTION = \\\"8\\\"; // 'Early access proportion must be smaller than 100%'\\n    string public constant INVALID_TIME = \\\"9\\\"; // 'Open time must be smaller than close time, close time for whale must not be greater than open time for community and not be greater than TGE date'\\n    string public constant INVALID_SIGNER = \\\"10\\\"; // 'Signer does not have the right to approve'\\n    string public constant INVALID_CLAIMABLE_AMOUNT = \\\"11\\\"; // 'Claimable amount must be greater than 0'\\n    string public constant NOT_IN_WHALE_LIST = \\\"12\\\"; // 'Investor must be in whale list'\\n    string public constant NOT_IN_INVESTOR_LIST = \\\"13\\\"; // 'Investor must be in the list'\\n    string public constant NOT_ENOUGH_ALLOWANCE = \\\"14\\\"; // 'Investor need to approve or permit pool for their token before invest'\\n    string public constant NOT_FUNDED = \\\"15\\\"; // 'Collaborator need to fund enough IDO token'\\n    string public constant ALREADY_CLAIM_TOTAL_AMOUNT = \\\"16\\\"; // 'User already claim all of their token'\\n    string public constant TIME_OUT_TO_BUY_IDO_TOKEN = \\\"17\\\"; // 'Time out for investor to buy IDO token'\\n    string public constant EXCEED_MAX_PURCHASE_AMOUNT_FOR_USER = \\\"18\\\"; // 'Investor can not buy exceed allocated amount'\\n    string public constant EXCEED_TOTAL_RAISE_AMOUNT = \\\"19\\\"; // 'Investor can not buy exceed total IDO token raise amount'\\n    string public constant EXCEED_MAX_PURCHASE_AMOUNT_FOR_KYC_USER = \\\"20\\\"; // 'Investor who already kyced can not buy exceed allocated amount for KYCed user'\\n    string public constant EXCEED_MAX_PURCHASE_AMOUNT_FOR_NOT_KYC_USER = \\\"21\\\"; // 'Investor who not kyc can not buy exceed allocated amount for not KYC user'\\n    string public constant EXCEED_MAX_PURCHASE_AMOUNT_FOR_EARLY_ACCESS = \\\"22\\\"; // 'Investor can not buy exceed allocated amount for early access'\\n    string public constant NOT_ALLOWED_TO_CLAIM_IDO_TOKEN = \\\"23\\\"; // 'Need admin's allowance to claim IDO token'\\n    string public constant NOT_ALLOWED_TO_CLAIM_TOKEN_FEE = \\\"24\\\"; // 'Admin can claim only one single time'\\n    string public constant NOT_ALLOWED_TO_DO_AFTER_TGE_DATE = \\\"25\\\"; // 'User must execute before TGE Date'\\n    string public constant NOT_ALLOWED_TO_CLAIM_PARTICIPATION_FEE = \\\"26\\\"; // 'Admin can claim only one single time'\\n    string public constant NOT_ALLOWED_TO_WITHDRAW_PURCHASED_AMOUNT = \\\"27\\\"; // 'Investor can withdraw their purchased amount if project failed and only one single time'\\n    string public constant NOT_ALLOWED_TO_FUND_AFTER_TGE_DATE = \\\"28\\\"; // 'Collaborator must fund IDO token before TGE date'\\n    string public constant NOT_ALLOWED_TO_ALLOW_INVESTOR_TO_CLAIM = \\\"29\\\"; // 'Admin can set claimable status to true if project success'\\n    string public constant NOT_ALLOWED_TO_CLAIM_PURCHASE_TOKEN = \\\"30\\\"; // 'Collaborator can only claim profit (which exclude token fee) when project successes'\\n    string public constant NOT_ALLOWED_TO_TRANSFER_BEFORE_TGE_DATE = \\\"31\\\"; // 'User can only claim or withdraw after TGE date'\\n}\\n\",\"keccak256\":\"0xc3cf62e3bfecee1cbf5c3e5dbcee8dd9e2b69fe254df95acc4b84ba3939590dc\",\"license\":\"MIT\"},\"contracts/interfaces/IAccessControl.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// OpenZeppelin Contracts v4.4.1 (access/IAccessControl.sol)\\n\\npragma solidity 0.8.10;\\n\\n/**\\n * @dev External interface of AccessControl declared to support ERC165 detection.\\n */\\ninterface IAccessControl {\\n    /**\\n     * @dev Emitted when `newAdminRole` is set as ``role``'s admin role, replacing `previousAdminRole`\\n     *\\n     * `DEFAULT_ADMIN_ROLE` is the starting admin for all roles, despite\\n     * {RoleAdminChanged} not being emitted signaling this.\\n     *\\n     * _Available since v3.1._\\n     */\\n    event RoleAdminChanged(\\n        bytes32 indexed role,\\n        bytes32 indexed previousAdminRole,\\n        bytes32 indexed newAdminRole\\n    );\\n\\n    /**\\n     * @dev Emitted when `account` is granted `role`.\\n     *\\n     * `sender` is the account that originated the contract call, an admin role\\n     * bearer except when using {AccessControl-_setupRole}.\\n     */\\n    event RoleGranted(\\n        bytes32 indexed role,\\n        address indexed account,\\n        address indexed sender\\n    );\\n\\n    /**\\n     * @dev Emitted when `account` is revoked `role`.\\n     *\\n     * `sender` is the account that originated the contract call:\\n     *   - if using `revokeRole`, it is the admin role bearer\\n     *   - if using `renounceRole`, it is the role bearer (i.e. `account`)\\n     */\\n    event RoleRevoked(\\n        bytes32 indexed role,\\n        address indexed account,\\n        address indexed sender\\n    );\\n\\n    /**\\n     * @dev Returns `true` if `account` has been granted `role`.\\n     */\\n    function hasRole(\\n        bytes32 role,\\n        address account\\n    ) external view returns (bool);\\n\\n    /**\\n     * @dev Returns the admin role that controls `role`. See {grantRole} and\\n     * {revokeRole}.\\n     *\\n     * To change a role's admin, use {AccessControl-_setRoleAdmin}.\\n     */\\n    function getRoleAdmin(bytes32 role) external view returns (bytes32);\\n\\n    /**\\n     * @dev Grants `role` to `account`.\\n     *\\n     * If `account` had not been already granted `role`, emits a {RoleGranted}\\n     * event.\\n     *\\n     * Requirements:\\n     *\\n     * - the caller must have ``role``'s admin role.\\n     */\\n    function grantRole(bytes32 role, address account) external;\\n\\n    /**\\n     * @dev Revokes `role` from `account`.\\n     *\\n     * If `account` had been granted `role`, emits a {RoleRevoked} event.\\n     *\\n     * Requirements:\\n     *\\n     * - the caller must have ``role``'s admin role.\\n     */\\n    function revokeRole(bytes32 role, address account) external;\\n\\n    /**\\n     * @dev Revokes `role` from the calling account.\\n     *\\n     * Roles are often managed via {grantRole} and {revokeRole}: this function's\\n     * purpose is to provide a mechanism for accounts to lose their privileges\\n     * if they are compromised (such as when a trusted device is misplaced).\\n     *\\n     * If the calling account had been granted `role`, emits a {RoleRevoked}\\n     * event.\\n     *\\n     * Requirements:\\n     *\\n     * - the caller must be `account`.\\n     */\\n    function renounceRole(bytes32 role, address account) external;\\n}\\n\",\"keccak256\":\"0xa33ad5bfbf665ecf8476b2a9e2552ffbc6d6865688c3e575b3419cd995b92db9\",\"license\":\"MIT\"},\"contracts/interfaces/IERC165.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// OpenZeppelin Contracts v4.4.1 (utils/introspection/IERC165.sol)\\n\\npragma solidity 0.8.10;\\n\\n/**\\n * @dev Interface of the ERC165 standard, as defined in the\\n * https://eips.ethereum.org/EIPS/eip-165[EIP].\\n *\\n * Implementers can declare support of contract interfaces, which can then be\\n * queried by others ({ERC165Checker}).\\n *\\n * For an implementation, see {ERC165}.\\n */\\ninterface IERC165 {\\n    /**\\n     * @dev Returns true if this contract implements the interface defined by\\n     * `interfaceId`. See the corresponding\\n     * https://eips.ethereum.org/EIPS/eip-165#how-interfaces-are-identified[EIP section]\\n     * to learn more about how these ids are created.\\n     *\\n     * This function call must use less than 30 000 gas.\\n     */\\n    function supportsInterface(bytes4 interfaceId) external view returns (bool);\\n}\\n\",\"keccak256\":\"0x0a9d562a248a740c982d5218ce9deabcaa77a3df4d5915dfc0b352496361abe5\",\"license\":\"MIT\"},\"contracts/interfaces/IERC20withDec.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n\\npragma solidity 0.8.10;\\n\\nimport {IERC20} from \\\"@openzeppelin/contracts/token/ERC20/IERC20.sol\\\";\\n\\ninterface IERC20withDec is IERC20 {\\n    /**\\n     * @dev Returns the symbol of tokens\\n     */\\n    function symbol() external view returns (string memory);\\n\\n    /**\\n     * @dev Returns the decimals of token\\n     */\\n    function decimals() external view returns (uint8);\\n}\\n\",\"keccak256\":\"0xd833b00968268053a0ea7eadf2bab94f236048a8a6d94a587cc1e0e43ab28d8f\",\"license\":\"MIT\"},\"contracts/interfaces/IIgnitionFactory.sol\":{\"content\":\"// SPDX-License-Identifier: UNLICENSED\\npragma solidity 0.8.10;\\n\\nimport \\\"../interfaces/IVesting.sol\\\";\\n\\ninterface IIgnitionFactory {\\n    function isOwner(address sender) external view returns (bool);\\n\\n    function createVesting() external returns (address);\\n}\\n\",\"keccak256\":\"0x6aba1f596387bb2dc27d2fdaddf94a4a8926ed35a142d30e2ee89845960a9a22\",\"license\":\"UNLICENSED\"},\"contracts/interfaces/IPool.sol\":{\"content\":\"// SPDX-License-Identifier: UNLICENSED\\npragma solidity 0.8.10;\\n\\ninterface IPool {\\n    function initialize(\\n        address[2] memory addresses,\\n        uint[18] memory numbers,\\n        address owner\\n    ) external;\\n}\\n\",\"keccak256\":\"0x3b53ab2b59c52fd8ab1dcd7956ee85ef37b882ee9e7dfedb1e67d4eb7ce8d5c4\",\"license\":\"UNLICENSED\"},\"contracts/interfaces/IVesting.sol\":{\"content\":\"// SPDX-License-Identifier: UNLICENSED\\npragma solidity 0.8.10;\\n\\nimport \\\"../interfaces/IERC20withDec.sol\\\";\\n\\ninterface IVesting {\\n    function initialize(\\n        address owner,\\n        address _IDOToken,\\n        uint _TGEDate,\\n        uint _TGEPercentage,\\n        uint _vestingCliff,\\n        uint _vestingFrequency,\\n        uint _numberOfVestingRelease\\n    ) external;\\n\\n    function createVestingSchedule(address _user, uint _totalAmount) external;\\n\\n    function setIDOToken(IERC20withDec _IDOToken) external;\\n\\n    function getIDOToken() external view returns (IERC20withDec);\\n\\n    function setFundedStatus(bool _status) external;\\n\\n    function setClaimableStatus(bool _status) external;\\n\\n    function isClaimable() external view returns (bool);\\n\\n    function getVestingInfo()\\n        external\\n        view\\n        returns (uint64, uint16, uint64, uint64, uint);\\n\\n    function updateTGEDate(uint64 _newTGEDate) external;\\n\\n    function isFunded() external returns (bool);\\n\\n    function withdrawRedundantIDOToken(\\n        address _beneficiary,\\n        uint _redundantAmount\\n    ) external;\\n}\\n\",\"keccak256\":\"0x7887d56026500481833da0a7f57f9a65b0f9ec3b7545771e0813ab52b350193c\",\"license\":\"UNLICENSED\"},\"contracts/libraries/Clones.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// OpenZeppelin Contracts (last updated v4.7.0) (proxy/Clones.sol)\\n\\npragma solidity 0.8.10;\\n\\n/**\\n * @dev https://eips.ethereum.org/EIPS/eip-1167[EIP 1167] is a standard for\\n * deploying minimal proxy contracts, also known as \\\"clones\\\".\\n *\\n * > To simply and cheaply clone contract functionality in an immutable way, this standard specifies\\n * > a minimal bytecode implementation that delegates all calls to a known, fixed address.\\n *\\n * The library includes functions to deploy a proxy using either `create` (traditional deployment) or `create2`\\n * (salted deterministic deployment). It also includes functions to predict the addresses of clones deployed using the\\n * deterministic method.\\n *\\n * _Available since v3.4._\\n */\\nlibrary Clones {\\n    /**\\n     * @dev Deploys and returns the address of a clone that mimics the behaviour of `implementation`.\\n     *\\n     * This function uses the create opcode, which should never revert.\\n     */\\n    function clone(address implementation) internal returns (address instance) {\\n        /// @solidity memory-safe-assembly\\n        assembly {\\n            let ptr := mload(0x40)\\n            mstore(\\n                ptr,\\n                0x3d602d80600a3d3981f3363d3d373d3d3d363d73000000000000000000000000\\n            )\\n            mstore(add(ptr, 0x14), shl(0x60, implementation))\\n            mstore(\\n                add(ptr, 0x28),\\n                0x5af43d82803e903d91602b57fd5bf30000000000000000000000000000000000\\n            )\\n            instance := create(0, ptr, 0x37)\\n        }\\n        require(instance != address(0), \\\"ERC1167: create failed\\\");\\n    }\\n\\n    /**\\n     * @dev Deploys and returns the address of a clone that mimics the behaviour of `implementation`.\\n     *\\n     * This function uses the create2 opcode and a `salt` to deterministically deploy\\n     * the clone. Using the same `implementation` and `salt` multiple time will revert, since\\n     * the clones cannot be deployed twice at the same address.\\n     */\\n    function cloneDeterministic(\\n        address implementation,\\n        bytes32 salt\\n    ) internal returns (address instance) {\\n        /// @solidity memory-safe-assembly\\n        assembly {\\n            let ptr := mload(0x40)\\n            mstore(\\n                ptr,\\n                0x3d602d80600a3d3981f3363d3d373d3d3d363d73000000000000000000000000\\n            )\\n            mstore(add(ptr, 0x14), shl(0x60, implementation))\\n            mstore(\\n                add(ptr, 0x28),\\n                0x5af43d82803e903d91602b57fd5bf30000000000000000000000000000000000\\n            )\\n            instance := create2(0, ptr, 0x37, salt)\\n        }\\n        require(instance != address(0), \\\"ERC1167: create2 failed\\\");\\n    }\\n\\n    /**\\n     * @dev Computes the address of a clone deployed using {Clones-cloneDeterministic}.\\n     */\\n    function predictDeterministicAddress(\\n        address implementation,\\n        bytes32 salt,\\n        address deployer\\n    ) internal pure returns (address predicted) {\\n        /// @solidity memory-safe-assembly\\n        assembly {\\n            let ptr := mload(0x40)\\n            mstore(\\n                ptr,\\n                0x3d602d80600a3d3981f3363d3d373d3d3d363d73000000000000000000000000\\n            )\\n            mstore(add(ptr, 0x14), shl(0x60, implementation))\\n            mstore(\\n                add(ptr, 0x28),\\n                0x5af43d82803e903d91602b57fd5bf3ff00000000000000000000000000000000\\n            )\\n            mstore(add(ptr, 0x38), shl(0x60, deployer))\\n            mstore(add(ptr, 0x4c), salt)\\n            mstore(add(ptr, 0x6c), keccak256(ptr, 0x37))\\n            predicted := keccak256(add(ptr, 0x37), 0x55)\\n        }\\n    }\\n\\n    /**\\n     * @dev Computes the address of a clone deployed using {Clones-cloneDeterministic}.\\n     */\\n    function predictDeterministicAddress(\\n        address implementation,\\n        bytes32 salt\\n    ) internal view returns (address predicted) {\\n        return predictDeterministicAddress(implementation, salt, address(this));\\n    }\\n}\\n\",\"keccak256\":\"0xc44cdbfd7f4a1c91643e811af01543345f95276326169310593bc141acd65c96\",\"license\":\"MIT\"},\"contracts/libraries/Strings.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// OpenZeppelin Contracts (last updated v4.7.0) (utils/Strings.sol)\\n\\npragma solidity 0.8.10;\\n\\n/**\\n * @dev String operations.\\n */\\nlibrary Strings {\\n    bytes16 private constant _HEX_SYMBOLS = \\\"0123456789abcdef\\\";\\n    uint8 private constant _ADDRESS_LENGTH = 20;\\n\\n    /**\\n     * @dev Converts a `uint256` to its ASCII `string` decimal representation.\\n     */\\n    function toString(uint256 value) internal pure returns (string memory) {\\n        // Inspired by OraclizeAPI's implementation - MIT licence\\n        // https://github.com/oraclize/ethereum-api/blob/b42146b063c7d6ee1358846c198246239e9360e8/oraclizeAPI_0.4.25.sol\\n\\n        if (value == 0) {\\n            return \\\"0\\\";\\n        }\\n        uint256 temp = value;\\n        uint256 digits;\\n        while (temp != 0) {\\n            digits++;\\n            temp /= 10;\\n        }\\n        bytes memory buffer = new bytes(digits);\\n        while (value != 0) {\\n            digits -= 1;\\n            buffer[digits] = bytes1(uint8(48 + uint256(value % 10)));\\n            value /= 10;\\n        }\\n        return string(buffer);\\n    }\\n\\n    /**\\n     * @dev Converts a `uint256` to its ASCII `string` hexadecimal representation.\\n     */\\n    function toHexString(uint256 value) internal pure returns (string memory) {\\n        if (value == 0) {\\n            return \\\"0x00\\\";\\n        }\\n        uint256 temp = value;\\n        uint256 length = 0;\\n        while (temp != 0) {\\n            length++;\\n            temp >>= 8;\\n        }\\n        return toHexString(value, length);\\n    }\\n\\n    /**\\n     * @dev Converts a `uint256` to its ASCII `string` hexadecimal representation with fixed length.\\n     */\\n    function toHexString(\\n        uint256 value,\\n        uint256 length\\n    ) internal pure returns (string memory) {\\n        bytes memory buffer = new bytes(2 * length + 2);\\n        buffer[0] = \\\"0\\\";\\n        buffer[1] = \\\"x\\\";\\n        for (uint256 i = 2 * length + 1; i > 1; --i) {\\n            buffer[i] = _HEX_SYMBOLS[value & 0xf];\\n            value >>= 4;\\n        }\\n        require(value == 0, \\\"Strings: hex length insufficient\\\");\\n        return string(buffer);\\n    }\\n\\n    /**\\n     * @dev Converts an `address` with fixed length of 20 bytes to its not checksummed ASCII `string` hexadecimal representation.\\n     */\\n    function toHexString(address addr) internal pure returns (string memory) {\\n        return toHexString(uint256(uint160(addr)), _ADDRESS_LENGTH);\\n    }\\n}\\n\",\"keccak256\":\"0xce2ebc107198cb200cfce7b7237665af1e9b1ada58eaa6891d265bc11f1b61d1\",\"license\":\"MIT\"},\"contracts/utils/AccessControl.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// OpenZeppelin Contracts (last updated v4.7.0) (access/AccessControl.sol)\\n\\npragma solidity 0.8.10;\\n\\nimport \\\"../interfaces/IAccessControl.sol\\\";\\nimport \\\"../utils/Context.sol\\\";\\nimport \\\"../libraries/Strings.sol\\\";\\nimport \\\"../utils/ERC165.sol\\\";\\n\\n/**\\n * @dev Contract module thatIAccessControl allows children to implement role-based access\\n * control mechanisms. This is a lightweight version that doesn't allow enumerating role\\n * members except through off-chain means by accessing the contract event logs. Some\\n * applications may benefit from on-chain enumerability, for those cases see\\n * {AccessControlEnumerable}.\\n *\\n * Roles are referred to by their `bytes32` identifier. These should be exposed\\n * in the external API and be unique. The best way to achieve this is by\\n * using `public constant` hash digests:\\n *\\n * ```\\n * bytes32 public constant MY_ROLE = keccak256(\\\"MY_ROLE\\\");\\n * ```\\n *\\n * Roles can be used to represent a set of permissions. To restrict access to a\\n * function call, use {hasRole}:\\n *\\n * ```\\n * function foo() public {\\n *     require(hasRole(MY_ROLE, msg.sender));\\n *     ...\\n * }\\n * ```\\n *\\n * Roles can be granted and revoked dynamically via the {grantRole} and\\n * {revokeRole} functions. Each role has an associated admin role, and only\\n * accounts that have a role's admin role can call {grantRole} and {revokeRole}.\\n *\\n * By default, the admin role for all roles is `DEFAULT_ADMIN_ROLE`, which means\\n * that only accounts with this role will be able to grant or revoke other\\n * roles. More complex role relationships can be created by using\\n * {_setRoleAdmin}.\\n *\\n * WARNING: The `DEFAULT_ADMIN_ROLE` is also its own admin: it has permission to\\n * grant and revoke this role. Extra precautions should be taken to secure\\n * accounts that have been granted it.\\n */\\nabstract contract AccessControl is Context, IAccessControl, ERC165 {\\n    struct RoleData {\\n        mapping(address => bool) members;\\n        bytes32 adminRole;\\n    }\\n\\n    mapping(bytes32 => RoleData) private _roles;\\n\\n    bytes32 public constant DEFAULT_ADMIN_ROLE = 0x00;\\n\\n    /**\\n     * @dev Modifier that checks that an account has a specific role. Reverts\\n     * with a standardized message including the required role.\\n     *\\n     * The format of the revert reason is given by the following regular expression:\\n     *\\n     *  /^AccessControl: account (0x[0-9a-f]{40}) is missing role (0x[0-9a-f]{64})$/\\n     *\\n     * _Available since v4.1._\\n     */\\n    modifier onlyRole(bytes32 role) {\\n        _checkRole(role);\\n        _;\\n    }\\n\\n    /**\\n     * @dev See {IERC165-supportsInterface}.\\n     */\\n    function supportsInterface(\\n        bytes4 interfaceId\\n    ) public view virtual override returns (bool) {\\n        return\\n            interfaceId == type(IAccessControl).interfaceId ||\\n            super.supportsInterface(interfaceId);\\n    }\\n\\n    /**\\n     * @dev Returns `true` if `account` has been granted `role`.\\n     */\\n    function hasRole(\\n        bytes32 role,\\n        address account\\n    ) public view virtual override returns (bool) {\\n        return _roles[role].members[account];\\n    }\\n\\n    /**\\n     * @dev Revert with a standard message if `_msgSender()` is missing `role`.\\n     * Overriding this function changes the behavior of the {onlyRole} modifier.\\n     *\\n     * Format of the revert message is described in {_checkRole}.\\n     *\\n     * _Available since v4.6._\\n     */\\n    function _checkRole(bytes32 role) internal view virtual {\\n        _checkRole(role, _msgSender());\\n    }\\n\\n    /**\\n     * @dev Revert with a standard message if `account` is missing `role`.\\n     *\\n     * The format of the revert reason is given by the following regular expression:\\n     *\\n     *  /^AccessControl: account (0x[0-9a-f]{40}) is missing role (0x[0-9a-f]{64})$/\\n     */\\n    function _checkRole(bytes32 role, address account) internal view virtual {\\n        if (!hasRole(role, account)) {\\n            revert(\\n                string(\\n                    abi.encodePacked(\\n                        \\\"AccessControl: account \\\",\\n                        Strings.toHexString(uint160(account), 20),\\n                        \\\" is missing role \\\",\\n                        Strings.toHexString(uint256(role), 32)\\n                    )\\n                )\\n            );\\n        }\\n    }\\n\\n    /**\\n     * @dev Returns the admin role that controls `role`. See {grantRole} and\\n     * {revokeRole}.\\n     *\\n     * To change a role's admin, use {_setRoleAdmin}.\\n     */\\n    function getRoleAdmin(\\n        bytes32 role\\n    ) public view virtual override returns (bytes32) {\\n        return _roles[role].adminRole;\\n    }\\n\\n    /**\\n     * @dev Grants `role` to `account`.\\n     *\\n     * If `account` had not been already granted `role`, emits a {RoleGranted}\\n     * event.\\n     *\\n     * Requirements:\\n     *\\n     * - the caller must have ``role``'s admin role.\\n     *\\n     * May emit a {RoleGranted} event.\\n     */\\n    function grantRole(\\n        bytes32 role,\\n        address account\\n    ) public virtual override onlyRole(getRoleAdmin(role)) {\\n        _grantRole(role, account);\\n    }\\n\\n    /**\\n     * @dev Revokes `role` from `account`.\\n     *\\n     * If `account` had been granted `role`, emits a {RoleRevoked} event.\\n     *\\n     * Requirements:\\n     *\\n     * - the caller must have ``role``'s admin role.\\n     *\\n     * May emit a {RoleRevoked} event.\\n     */\\n    function revokeRole(\\n        bytes32 role,\\n        address account\\n    ) public virtual override onlyRole(getRoleAdmin(role)) {\\n        _revokeRole(role, account);\\n    }\\n\\n    /**\\n     * @dev Revokes `role` from the calling account.\\n     *\\n     * Roles are often managed via {grantRole} and {revokeRole}: this function's\\n     * purpose is to provide a mechanism for accounts to lose their privileges\\n     * if they are compromised (such as when a trusted device is misplaced).\\n     *\\n     * If the calling account had been revoked `role`, emits a {RoleRevoked}\\n     * event.\\n     *\\n     * Requirements:\\n     *\\n     * - the caller must be `account`.\\n     *\\n     * May emit a {RoleRevoked} event.\\n     */\\n    function renounceRole(\\n        bytes32 role,\\n        address account\\n    ) public virtual override {\\n        require(\\n            account == _msgSender(),\\n            \\\"AccessControl: can only renounce roles for self\\\"\\n        );\\n\\n        _revokeRole(role, account);\\n    }\\n\\n    /**\\n     * @dev Grants `role` to `account`.\\n     *\\n     * If `account` had not been already granted `role`, emits a {RoleGranted}\\n     * event. Note that unlike {grantRole}, this function doesn't perform any\\n     * checks on the calling account.\\n     *\\n     * May emit a {RoleGranted} event.\\n     *\\n     * [WARNING]\\n     * ====\\n     * This function should only be called from the constructor when setting\\n     * up the initial roles for the system.\\n     *\\n     * Using this function in any other way is effectively circumventing the admin\\n     * system imposed by {AccessControl}.\\n     * ====\\n     *\\n     * NOTE: This function is deprecated in favor of {_grantRole}.\\n     */\\n    function _setupRole(bytes32 role, address account) internal virtual {\\n        _grantRole(role, account);\\n    }\\n\\n    /**\\n     * @dev Sets `adminRole` as ``role``'s admin role.\\n     *\\n     * Emits a {RoleAdminChanged} event.\\n     */\\n    function _setRoleAdmin(bytes32 role, bytes32 adminRole) internal virtual {\\n        bytes32 previousAdminRole = getRoleAdmin(role);\\n        _roles[role].adminRole = adminRole;\\n        emit RoleAdminChanged(role, previousAdminRole, adminRole);\\n    }\\n\\n    /**\\n     * @dev Grants `role` to `account`.\\n     *\\n     * Internal function without access restriction.\\n     *\\n     * May emit a {RoleGranted} event.\\n     */\\n    function _grantRole(bytes32 role, address account) internal virtual {\\n        if (!hasRole(role, account)) {\\n            _roles[role].members[account] = true;\\n            emit RoleGranted(role, account, _msgSender());\\n        }\\n    }\\n\\n    /**\\n     * @dev Revokes `role` from `account`.\\n     *\\n     * Internal function without access restriction.\\n     *\\n     * May emit a {RoleRevoked} event.\\n     */\\n    function _revokeRole(bytes32 role, address account) internal virtual {\\n        if (hasRole(role, account)) {\\n            _roles[role].members[account] = false;\\n            emit RoleRevoked(role, account, _msgSender());\\n        }\\n    }\\n}\\n\",\"keccak256\":\"0x0984478ad7f12476ff4f6ad8e829bfc0708be8e5be9e2c306f34296b338cc60a\",\"license\":\"MIT\"},\"contracts/utils/Context.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// OpenZeppelin Contracts v4.4.1 (utils/Context.sol)\\n\\npragma solidity 0.8.10;\\n\\n/**\\n * @dev Provides information about the current execution context, including the\\n * sender of the transaction and its data. While these are generally available\\n * via msg.sender and msg.data, they should not be accessed in such a direct\\n * manner, since when dealing with meta-transactions the account sending and\\n * paying for execution may not be the actual sender (as far as an application\\n * is concerned).\\n *\\n * This contract is only required for intermediate, library-like contracts.\\n */\\nabstract contract Context {\\n    function _msgSender() internal view virtual returns (address) {\\n        return msg.sender;\\n    }\\n\\n    function _msgData() internal view virtual returns (bytes calldata) {\\n        return msg.data;\\n    }\\n}\\n\",\"keccak256\":\"0x43a65135f4f49e783182290da5c4c86a2ac4599f94391483b360e094b3b8f759\",\"license\":\"MIT\"},\"contracts/utils/ERC165.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// OpenZeppelin Contracts v4.4.1 (utils/introspection/ERC165.sol)\\n\\npragma solidity 0.8.10;\\n\\nimport \\\"../interfaces/IERC165.sol\\\";\\n\\n/**\\n * @dev Implementation of the {IERC165} interface.\\n *\\n * Contracts that want to implement ERC165 should inherit from this contract and override {supportsInterface} to check\\n * for the additional interface id that will be supported. For example:\\n *\\n * ```solidity\\n * function supportsInterface(bytes4 interfaceId) public view virtual override returns (bool) {\\n *     return interfaceId == type(MyInterface).interfaceId || super.supportsInterface(interfaceId);\\n * }\\n * ```\\n *\\n * Alternatively, {ERC165Storage} provides an easier to use but more expensive implementation.\\n */\\nabstract contract ERC165 is IERC165 {\\n    /**\\n     * @dev See {IERC165-supportsInterface}.\\n     */\\n    function supportsInterface(\\n        bytes4 interfaceId\\n    ) public view virtual override returns (bool) {\\n        return interfaceId == type(IERC165).interfaceId;\\n    }\\n}\\n\",\"keccak256\":\"0x72ff03adb9fb6bb63f5f7150b0e12e18c61963be2efa3b3965e589efcedb6924\",\"license\":\"MIT\"},\"contracts/utils/Initializable.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// OpenZeppelin Contracts (last updated v4.7.0) (proxy/utils/Initializable.sol)\\n\\npragma solidity 0.8.10;\\n\\n// import \\\"./Address.sol\\\";\\n\\n/**\\n * @dev This is a base contract to aid in writing upgradeable contracts, or any kind of contract that will be deployed\\n * behind a proxy. Since proxied contracts do not make use of a constructor, it's common to move constructor logic to an\\n * external initializer function, usually called `initialize`. It then becomes necessary to protect this initializer\\n * function so it can only be called once. The {initializer} modifier provided by this contract will have this effect.\\n *\\n * The initialization functions use a version number. Once a version number is used, it is consumed and cannot be\\n * reused. This mechanism prevents re-execution of each \\\"step\\\" but allows the creation of new initialization steps in\\n * case an upgrade adds a module that needs to be initialized.\\n *\\n * For example:\\n *\\n * [.hljs-theme-light.nopadding]\\n * ```\\n * contract MyToken is ERC20Upgradeable {\\n *     function initialize() initializer public {\\n *         __ERC20_init(\\\"MyToken\\\", \\\"MTK\\\");\\n *     }\\n * }\\n * contract MyTokenV2 is MyToken, ERC20PermitUpgradeable {\\n *     function initializeV2() reinitializer(2) public {\\n *         __ERC20Permit_init(\\\"MyToken\\\");\\n *     }\\n * }\\n * ```\\n *\\n * TIP: To avoid leaving the proxy in an uninitialized state, the initializer function should be called as early as\\n * possible by providing the encoded function call as the `_data` argument to {ERC1967Proxy-constructor}.\\n *\\n * CAUTION: When used with inheritance, manual care must be taken to not invoke a parent initializer twice, or to ensure\\n * that all initializers are idempotent. This is not verified automatically as constructors are by Solidity.\\n *\\n * [CAUTION]\\n * ====\\n * Avoid leaving a contract uninitialized.\\n *\\n * An uninitialized contract can be taken over by an attacker. This applies to both a proxy and its implementation\\n * contract, which may impact the proxy. To prevent the implementation contract from being used, you should invoke\\n * the {_disableInitializers} function in the constructor to automatically lock it when it is deployed:\\n *\\n * [.hljs-theme-light.nopadding]\\n * ```\\n * /// @custom:oz-upgrades-unsafe-allow constructor\\n * constructor() {\\n *     _disableInitializers();\\n * }\\n * ```\\n * ====\\n */\\nabstract contract Initializable {\\n    /**\\n     * @dev Indicates that the contract has been initialized.\\n     * @custom:oz-retyped-from bool\\n     */\\n    uint8 private _initialized;\\n\\n    /**\\n     * @dev Indicates that the contract is in the process of being initialized.\\n     */\\n    bool private _initializing;\\n\\n    /**\\n     * @dev Triggered when the contract has been initialized or reinitialized.\\n     */\\n    event Initialized(uint8 version);\\n\\n    /**\\n     * @dev A modifier that defines a protected initializer function that can be invoked at most once. In its scope,\\n     * `onlyInitializing` functions can be used to initialize parent contracts. Equivalent to `reinitializer(1)`.\\n     */\\n    modifier initializer() {\\n        bool isTopLevelCall = !_initializing;\\n        require(\\n            // (isTopLevelCall && _initialized < 1) || (!Address.isContract(address(this)) && _initialized == 1),\\n            (isTopLevelCall && _initialized < 1) ||\\n                (!(address(this).code.length > 0) && _initialized == 1),\\n            \\\"Initializable: contract is already initialized\\\"\\n        );\\n        _initialized = 1;\\n        if (isTopLevelCall) {\\n            _initializing = true;\\n        }\\n        _;\\n        if (isTopLevelCall) {\\n            _initializing = false;\\n            emit Initialized(1);\\n        }\\n    }\\n\\n    /**\\n     * @dev A modifier that defines a protected reinitializer function that can be invoked at most once, and only if the\\n     * contract hasn't been initialized to a greater version before. In its scope, `onlyInitializing` functions can be\\n     * used to initialize parent contracts.\\n     *\\n     * `initializer` is equivalent to `reinitializer(1)`, so a reinitializer may be used after the original\\n     * initialization step. This is essential to configure modules that are added through upgrades and that require\\n     * initialization.\\n     *\\n     * Note that versions can jump in increments greater than 1; this implies that if multiple reinitializers coexist in\\n     * a contract, executing them in the right order is up to the developer or operator.\\n     */\\n    modifier reinitializer(uint8 version) {\\n        require(\\n            !_initializing && _initialized < version,\\n            \\\"Initializable: contract is already initialized\\\"\\n        );\\n        _initialized = version;\\n        _initializing = true;\\n        _;\\n        _initializing = false;\\n        emit Initialized(version);\\n    }\\n\\n    /**\\n     * @dev Modifier to protect an initialization function so that it can only be invoked by functions with the\\n     * {initializer} and {reinitializer} modifiers, directly or indirectly.\\n     */\\n    modifier onlyInitializing() {\\n        require(_initializing, \\\"Initializable: contract is not initializing\\\");\\n        _;\\n    }\\n}\\n\",\"keccak256\":\"0x1bacaa7b1f1521407751b3d5232b305d429e511f260af1bd8b1c8f38d41902b0\",\"license\":\"MIT\"},\"contracts/utils/Pausable.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// OpenZeppelin Contracts (last updated v4.7.0) (security/Pausable.sol)\\n\\npragma solidity 0.8.10;\\n\\nimport \\\"./Context.sol\\\";\\n\\n/**\\n * @dev Contract module which allows children to implement an emergency stop\\n * mechanism that can be triggered by an authorized account.\\n *\\n * This module is used through inheritance. It will make available the\\n * modifiers `whenNotPaused` and `whenPaused`, which can be applied to\\n * the functions of your contract. Note that they will not be pausable by\\n * simply including this module, only once the modifiers are put in place.\\n */\\nabstract contract Pausable is Context {\\n    /**\\n     * @dev Emitted when the pause is triggered by `account`.\\n     */\\n    event Paused(address account);\\n\\n    /**\\n     * @dev Emitted when the pause is lifted by `account`.\\n     */\\n    event Unpaused(address account);\\n\\n    bool private _paused;\\n\\n    /**\\n     * @dev Initializes the contract in unpaused state.\\n     */\\n    constructor() {\\n        _paused = false;\\n    }\\n\\n    /**\\n     * @dev Modifier to make a function callable only when the contract is not paused.\\n     *\\n     * Requirements:\\n     *\\n     * - The contract must not be paused.\\n     */\\n    modifier whenNotPaused() {\\n        _requireNotPaused();\\n        _;\\n    }\\n\\n    /**\\n     * @dev Modifier to make a function callable only when the contract is paused.\\n     *\\n     * Requirements:\\n     *\\n     * - The contract must be paused.\\n     */\\n    modifier whenPaused() {\\n        _requirePaused();\\n        _;\\n    }\\n\\n    /**\\n     * @dev Returns true if the contract is paused, and false otherwise.\\n     */\\n    function paused() public view virtual returns (bool) {\\n        return _paused;\\n    }\\n\\n    /**\\n     * @dev Throws if the contract is paused.\\n     */\\n    function _requireNotPaused() internal view virtual {\\n        require(!paused(), \\\"Pausable: paused\\\");\\n    }\\n\\n    /**\\n     * @dev Throws if the contract is not paused.\\n     */\\n    function _requirePaused() internal view virtual {\\n        require(paused(), \\\"Pausable: not paused\\\");\\n    }\\n\\n    /**\\n     * @dev Triggers stopped state.\\n     *\\n     * Requirements:\\n     *\\n     * - The contract must not be paused.\\n     */\\n    function _pause() internal virtual whenNotPaused {\\n        _paused = true;\\n        emit Paused(_msgSender());\\n    }\\n\\n    /**\\n     * @dev Returns to normal state.\\n     *\\n     * Requirements:\\n     *\\n     * - The contract must be paused.\\n     */\\n    function _unpause() internal virtual whenPaused {\\n        _paused = false;\\n        emit Unpaused(_msgSender());\\n    }\\n}\\n\",\"keccak256\":\"0xd1750e2a389c2576ae7a0c2190fa7ee2e351bf0c7bb6320be27b36c7850a326e\",\"license\":\"MIT\"},\"contracts/utils/ReentrancyGuard.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// OpenZeppelin Contracts v4.4.1 (security/ReentrancyGuard.sol)\\n\\npragma solidity 0.8.10;\\n\\n/**\\n * @dev Contract module that helps prevent reentrant calls to a function.\\n *\\n * Inheriting from `ReentrancyGuard` will make the {nonReentrant} modifier\\n * available, which can be applied to functions to make sure there are no nested\\n * (reentrant) calls to them.\\n *\\n * Note that because there is a single `nonReentrant` guard, functions marked as\\n * `nonReentrant` may not call one another. This can be worked around by making\\n * those functions `private`, and then adding `external` `nonReentrant` entry\\n * points to them.\\n *\\n * TIP: If you would like to learn more about reentrancy and alternative ways\\n * to protect against it, check out our blog post\\n * https://blog.openzeppelin.com/reentrancy-after-istanbul/[Reentrancy After Istanbul].\\n */\\nabstract contract ReentrancyGuard {\\n    // Booleans are more expensive than uint256 or any type that takes up a full\\n    // word because each write operation emits an extra SLOAD to first read the\\n    // slot's contents, replace the bits taken up by the boolean, and then write\\n    // back. This is the compiler's defense against contract upgrades and\\n    // pointer aliasing, and it cannot be disabled.\\n\\n    // The values being non-zero value makes deployment a bit more expensive,\\n    // but in exchange the refund on every call to nonReentrant will be lower in\\n    // amount. Since refunds are capped to a percentage of the total\\n    // transaction's gas, it is best to keep them low in cases like this one, to\\n    // increase the likelihood of the full refund coming into effect.\\n    uint256 private constant _NOT_ENTERED = 1;\\n    uint256 private constant _ENTERED = 2;\\n\\n    uint256 private _status;\\n\\n    constructor() {\\n        _status = _NOT_ENTERED;\\n    }\\n\\n    /**\\n     * @dev Prevents a contract from calling itself, directly or indirectly.\\n     * Calling a `nonReentrant` function from another `nonReentrant`\\n     * function is not supported. It is possible to prevent this from happening\\n     * by making the `nonReentrant` function external, and making it call a\\n     * `private` function that does the actual work.\\n     */\\n    modifier nonReentrant() {\\n        // On the first call to nonReentrant, _notEntered will be true\\n        require(_status != _ENTERED, \\\"ReentrancyGuard: reentrant call\\\");\\n\\n        // Any calls to nonReentrant after this point will fail\\n        _status = _ENTERED;\\n\\n        _;\\n\\n        // By storing the original value once again, a refund is triggered (see\\n        // https://eips.ethereum.org/EIPS/eip-2200)\\n        _status = _NOT_ENTERED;\\n    }\\n}\\n\",\"keccak256\":\"0x80216195f399679b62d20ff215250a59a1562023d5c673255215863e20819d06\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506001805460ff191681556002556112498061002d6000396000f3fe608060405234801561001057600080fd5b50600436106100f65760003560e01c806391d148541161009257806391d14854146101eb578063a217fddf146101fe578063abaf36df14610206578063bb8e3f4414610219578063cc6f03331461022c578063ce1ee86a14610234578063d547741f14610247578063d6f748981461025a578063e58378bb1461026d57600080fd5b806301ffc9a7146100fb578063159ce1351461012357806315ef4ddc1461014e578063248a9ca3146101615780632f2ff15d146101925780632f54bf6e146101a757806336568abe146101ba578063485cc955146101cd5780635c975abb146101e0575b600080fd5b61010e610109366004610db5565b610282565b60405190151581526020015b60405180910390f35b600454610136906001600160a01b031681565b6040516001600160a01b03909116815260200161011a565b600354610136906001600160a01b031681565b61018461016f366004610ddf565b60009081526020819052604090206001015490565b60405190815260200161011a565b6101a56101a0366004610e0f565b6102b9565b005b61010e6101b5366004610e3b565b6102e3565b6101a56101c8366004610e0f565b6102fd565b6101a56101db366004610e56565b610380565b60015460ff1661010e565b61010e6101f9366004610e0f565b6104fb565b610184600081565b610136610214366004610eff565b610524565b6101a5610227366004610e3b565b61064d565b61013661072c565b6101a5610242366004610e3b565b610791565b6101a5610255366004610e0f565b61082e565b6101a5610268366004610e3b565b610853565b6101846000805160206111f483398151915281565b60006001600160e01b03198216637965db0b60e01b14806102b357506301ffc9a760e01b6001600160e01b03198316145b92915050565b6000828152602081905260409020600101546102d4816108f0565b6102de83836108fa565b505050565b60006102b36000805160206111f4833981519152836104fb565b6001600160a01b03811633146103725760405162461bcd60e51b815260206004820152602f60248201527f416363657373436f6e74726f6c3a2063616e206f6e6c792072656e6f756e636560448201526e103937b632b9903337b91039b2b63360891b60648201526084015b60405180910390fd5b61037c828261097e565b5050565b60015462010000900460ff16158080156103a3575060018054610100900460ff16105b806103c15750303b1580156103c1575060018054610100900460ff16145b6104245760405162461bcd60e51b815260206004820152602e60248201527f496e697469616c697a61626c653a20636f6e747261637420697320616c72656160448201526d191e481a5b9a5d1a585b1a5e995960921b6064820152608401610369565b6001805461ff001916610100179055801561044b576001805462ff00001916620100001790555b600380546001600160a01b038086166001600160a01b03199283161790925560048054928516929091169190911790556104996000805160206111f48339815191526104943390565b6109e3565b6104b16000805160206111f4833981519152806109ed565b80156102de576001805462ff0000191681556040519081527f7f26b83ff96e1f2b6a682f133852f6798a09c465da95921460cefb38474024989060200160405180910390a1505050565b6000918252602082815260408084206001600160a01b0393909316845291905290205460ff1690565b6000808484338560405160200161053e9493929190611011565b60408051601f19818403018152919052805160209091012060035490915061056f906001600160a01b031682610a38565b604051636db6e03160e01b81529092506001600160a01b03831690636db6e031906105a29088908890339060040161104a565b600060405180830381600087803b1580156105bc57600080fd5b505af11580156105d0573d6000803e3d6000fd5b5050505060008585856040516020016105eb93929190611080565b60408051601f1981840301815282825280516020918201208084526001600160a01b0387169184019190915292507fa843b0068d872c047023d406f9e5cea249189566b6fe594909f554578e81656d910160405180910390a150509392505050565b60015462010000900460ff166106b95760405162461bcd60e51b815260206004820152602b60248201527f496e697469616c697a61626c653a20636f6e7472616374206973206e6f74206960448201526a6e697469616c697a696e6760a81b6064820152608401610369565b6040805180820190915260018152600d60fa1b60208201526001600160a01b0382166106f85760405162461bcd60e51b815260040161036991906110d7565b506107116000805160206111f4833981519152826109e3565b6107296000805160206111f4833981519152806109ed565b50565b6004546000908190610746906001600160a01b0316610ad2565b90507f2ee44d821b06c9aa990927d787f4adf9d8d3eb9bf798ef5c80415cd7a396560233604080516001600160a01b03928316815291841660208301520160405180910390a1919050565b61079a336102e3565b604051806040016040528060018152602001601960f91b815250906107d25760405162461bcd60e51b815260040161036991906110d7565b506107dc81610b6f565b600480546001600160a01b038381166001600160a01b0319831681179093556040519116919082907f722ecaaadd945da6d0f5682999119f95d2be4f4bb04ce8883f85e86468f93c3090600090a35050565b600082815260208190526040902060010154610849816108f0565b6102de838361097e565b61085c336102e3565b604051806040016040528060018152602001601960f91b815250906108945760405162461bcd60e51b815260040161036991906110d7565b5061089e81610b6f565b600380546001600160a01b038381166001600160a01b0319831681179093556040519116919082907f0617fd31aa5ab95ec80eefc1eb61a2c477aa419d1d761b4e46f5f077e47852aa90600090a35050565b6107298133610bae565b61090482826104fb565b61037c576000828152602081815260408083206001600160a01b03851684529091529020805460ff1916600117905561093a3390565b6001600160a01b0316816001600160a01b0316837f2f8788117e7eff1d82e926ec794901d17c78024a50270940304540a733656f0d60405160405180910390a45050565b61098882826104fb565b1561037c576000828152602081815260408083206001600160a01b0385168085529252808320805460ff1916905551339285917ff6391f5c32d9c69d2a47ea670b442974b53935d1edc7fd64eb21e047a839171b9190a45050565b61037c82826108fa565b600082815260208190526040808220600101805490849055905190918391839186917fbd79b86ffe0ab8e8776151514217cd7cacd52c909f66475c3af44e129f0b00ff9190a4505050565b6000604051733d602d80600a3d3981f3363d3d373d3d3d363d7360601b81528360601b60148201526e5af43d82803e903d91602b57fd5bf360881b6028820152826037826000f59150506001600160a01b0381166102b35760405162461bcd60e51b8152602060048201526017602482015276115490cc4c4d8dce8818dc99585d194c8819985a5b1959604a1b6044820152606401610369565b6000604051733d602d80600a3d3981f3363d3d373d3d3d363d7360601b81528260601b60148201526e5af43d82803e903d91602b57fd5bf360881b60288201526037816000f09150506001600160a01b038116610b6a5760405162461bcd60e51b8152602060048201526016602482015275115490cc4c4d8dce8818dc99585d194819985a5b195960521b6044820152606401610369565b919050565b6040805180820190915260018152600d60fa1b60208201526001600160a01b03821661037c5760405162461bcd60e51b815260040161036991906110d7565b610bb882826104fb565b61037c57610bd0816001600160a01b03166014610c12565b610bdb836020610c12565b604051602001610bec92919061110a565b60408051601f198184030181529082905262461bcd60e51b8252610369916004016110d7565b60606000610c2183600261118f565b610c2c9060026111ae565b67ffffffffffffffff811115610c4457610c44610e80565b6040519080825280601f01601f191660200182016040528015610c6e576020820181803683370190505b509050600360fc1b81600081518110610c8957610c896111c6565b60200101906001600160f81b031916908160001a905350600f60fb1b81600181518110610cb857610cb86111c6565b60200101906001600160f81b031916908160001a9053506000610cdc84600261118f565b610ce79060016111ae565b90505b6001811115610d5f576f181899199a1a9b1b9c1cb0b131b232b360811b85600f1660108110610d1b57610d1b6111c6565b1a60f81b828281518110610d3157610d316111c6565b60200101906001600160f81b031916908160001a90535060049490941c93610d58816111dc565b9050610cea565b508315610dae5760405162461bcd60e51b815260206004820181905260248201527f537472696e67733a20686578206c656e67746820696e73756666696369656e746044820152606401610369565b9392505050565b600060208284031215610dc757600080fd5b81356001600160e01b031981168114610dae57600080fd5b600060208284031215610df157600080fd5b5035919050565b80356001600160a01b0381168114610b6a57600080fd5b60008060408385031215610e2257600080fd5b82359150610e3260208401610df8565b90509250929050565b600060208284031215610e4d57600080fd5b610dae82610df8565b60008060408385031215610e6957600080fd5b610e7283610df8565b9150610e3260208401610df8565b634e487b7160e01b600052604160045260246000fd5b6040805190810167ffffffffffffffff81118282101715610ec757634e487b7160e01b600052604160045260246000fd5b60405290565b604051610240810167ffffffffffffffff81118282101715610ec757634e487b7160e01b600052604160045260246000fd5b60008060006102a08486031215610f1557600080fd5b84601f850112610f2457600080fd5b610f2c610e96565b806040860187811115610f3e57600080fd5b865b81811015610f5f57610f5181610df8565b845260209384019301610f40565b5081955087605f880112610f7257600080fd5b610f7a610ecd565b9250829150610280870188811115610f9157600080fd5b5b80821015610fad578135845260209384019390910190610f92565b95989197505093359450505050565b8060005b6002811015610fe85781516001600160a01b0316845260209384019390910190600101610fc0565b50505050565b8060005b6012811015610fe8578151845260209384019390910190600101610ff2565b6102c081016110208287610fbc565b61102d6040830186610fee565b6001600160a01b03939093166102808201526102a0015292915050565b6102a081016110598286610fbc565b6110666040830185610fee565b6001600160a01b0392909216610280919091015292915050565b6102a0810161108f8286610fbc565b61109c6040830185610fee565b82610280830152949350505050565b60005b838110156110c65781810151838201526020016110ae565b83811115610fe85750506000910152565b60208152600082518060208401526110f68160408501602087016110ab565b601f01601f19169190910160400192915050565b76020b1b1b2b9b9a1b7b73a3937b61d1030b1b1b7bab73a1604d1b81526000835161113c8160178501602088016110ab565b7001034b99036b4b9b9b4b733903937b6329607d1b601791840191820152835161116d8160288401602088016110ab565b01602801949350505050565b634e487b7160e01b600052601160045260246000fd5b60008160001904831182151516156111a9576111a9611179565b500290565b600082198211156111c1576111c1611179565b500190565b634e487b7160e01b600052603260045260246000fd5b6000816111eb576111eb611179565b50600019019056feb19546dff01e856fb3f010c267a7b1c60363cf8a4664e21cc89c26224620214ea26469706673582212207017736fb156fbd8a3adc1270522d9d7275409aa8e71ad20cfb1f5c76f518bfb64736f6c634300080a0033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100f65760003560e01c806391d148541161009257806391d14854146101eb578063a217fddf146101fe578063abaf36df14610206578063bb8e3f4414610219578063cc6f03331461022c578063ce1ee86a14610234578063d547741f14610247578063d6f748981461025a578063e58378bb1461026d57600080fd5b806301ffc9a7146100fb578063159ce1351461012357806315ef4ddc1461014e578063248a9ca3146101615780632f2ff15d146101925780632f54bf6e146101a757806336568abe146101ba578063485cc955146101cd5780635c975abb146101e0575b600080fd5b61010e610109366004610db5565b610282565b60405190151581526020015b60405180910390f35b600454610136906001600160a01b031681565b6040516001600160a01b03909116815260200161011a565b600354610136906001600160a01b031681565b61018461016f366004610ddf565b60009081526020819052604090206001015490565b60405190815260200161011a565b6101a56101a0366004610e0f565b6102b9565b005b61010e6101b5366004610e3b565b6102e3565b6101a56101c8366004610e0f565b6102fd565b6101a56101db366004610e56565b610380565b60015460ff1661010e565b61010e6101f9366004610e0f565b6104fb565b610184600081565b610136610214366004610eff565b610524565b6101a5610227366004610e3b565b61064d565b61013661072c565b6101a5610242366004610e3b565b610791565b6101a5610255366004610e0f565b61082e565b6101a5610268366004610e3b565b610853565b6101846000805160206111f483398151915281565b60006001600160e01b03198216637965db0b60e01b14806102b357506301ffc9a760e01b6001600160e01b03198316145b92915050565b6000828152602081905260409020600101546102d4816108f0565b6102de83836108fa565b505050565b60006102b36000805160206111f4833981519152836104fb565b6001600160a01b03811633146103725760405162461bcd60e51b815260206004820152602f60248201527f416363657373436f6e74726f6c3a2063616e206f6e6c792072656e6f756e636560448201526e103937b632b9903337b91039b2b63360891b60648201526084015b60405180910390fd5b61037c828261097e565b5050565b60015462010000900460ff16158080156103a3575060018054610100900460ff16105b806103c15750303b1580156103c1575060018054610100900460ff16145b6104245760405162461bcd60e51b815260206004820152602e60248201527f496e697469616c697a61626c653a20636f6e747261637420697320616c72656160448201526d191e481a5b9a5d1a585b1a5e995960921b6064820152608401610369565b6001805461ff001916610100179055801561044b576001805462ff00001916620100001790555b600380546001600160a01b038086166001600160a01b03199283161790925560048054928516929091169190911790556104996000805160206111f48339815191526104943390565b6109e3565b6104b16000805160206111f4833981519152806109ed565b80156102de576001805462ff0000191681556040519081527f7f26b83ff96e1f2b6a682f133852f6798a09c465da95921460cefb38474024989060200160405180910390a1505050565b6000918252602082815260408084206001600160a01b0393909316845291905290205460ff1690565b6000808484338560405160200161053e9493929190611011565b60408051601f19818403018152919052805160209091012060035490915061056f906001600160a01b031682610a38565b604051636db6e03160e01b81529092506001600160a01b03831690636db6e031906105a29088908890339060040161104a565b600060405180830381600087803b1580156105bc57600080fd5b505af11580156105d0573d6000803e3d6000fd5b5050505060008585856040516020016105eb93929190611080565b60408051601f1981840301815282825280516020918201208084526001600160a01b0387169184019190915292507fa843b0068d872c047023d406f9e5cea249189566b6fe594909f554578e81656d910160405180910390a150509392505050565b60015462010000900460ff166106b95760405162461bcd60e51b815260206004820152602b60248201527f496e697469616c697a61626c653a20636f6e7472616374206973206e6f74206960448201526a6e697469616c697a696e6760a81b6064820152608401610369565b6040805180820190915260018152600d60fa1b60208201526001600160a01b0382166106f85760405162461bcd60e51b815260040161036991906110d7565b506107116000805160206111f4833981519152826109e3565b6107296000805160206111f4833981519152806109ed565b50565b6004546000908190610746906001600160a01b0316610ad2565b90507f2ee44d821b06c9aa990927d787f4adf9d8d3eb9bf798ef5c80415cd7a396560233604080516001600160a01b03928316815291841660208301520160405180910390a1919050565b61079a336102e3565b604051806040016040528060018152602001601960f91b815250906107d25760405162461bcd60e51b815260040161036991906110d7565b506107dc81610b6f565b600480546001600160a01b038381166001600160a01b0319831681179093556040519116919082907f722ecaaadd945da6d0f5682999119f95d2be4f4bb04ce8883f85e86468f93c3090600090a35050565b600082815260208190526040902060010154610849816108f0565b6102de838361097e565b61085c336102e3565b604051806040016040528060018152602001601960f91b815250906108945760405162461bcd60e51b815260040161036991906110d7565b5061089e81610b6f565b600380546001600160a01b038381166001600160a01b0319831681179093556040519116919082907f0617fd31aa5ab95ec80eefc1eb61a2c477aa419d1d761b4e46f5f077e47852aa90600090a35050565b6107298133610bae565b61090482826104fb565b61037c576000828152602081815260408083206001600160a01b03851684529091529020805460ff1916600117905561093a3390565b6001600160a01b0316816001600160a01b0316837f2f8788117e7eff1d82e926ec794901d17c78024a50270940304540a733656f0d60405160405180910390a45050565b61098882826104fb565b1561037c576000828152602081815260408083206001600160a01b0385168085529252808320805460ff1916905551339285917ff6391f5c32d9c69d2a47ea670b442974b53935d1edc7fd64eb21e047a839171b9190a45050565b61037c82826108fa565b600082815260208190526040808220600101805490849055905190918391839186917fbd79b86ffe0ab8e8776151514217cd7cacd52c909f66475c3af44e129f0b00ff9190a4505050565b6000604051733d602d80600a3d3981f3363d3d373d3d3d363d7360601b81528360601b60148201526e5af43d82803e903d91602b57fd5bf360881b6028820152826037826000f59150506001600160a01b0381166102b35760405162461bcd60e51b8152602060048201526017602482015276115490cc4c4d8dce8818dc99585d194c8819985a5b1959604a1b6044820152606401610369565b6000604051733d602d80600a3d3981f3363d3d373d3d3d363d7360601b81528260601b60148201526e5af43d82803e903d91602b57fd5bf360881b60288201526037816000f09150506001600160a01b038116610b6a5760405162461bcd60e51b8152602060048201526016602482015275115490cc4c4d8dce8818dc99585d194819985a5b195960521b6044820152606401610369565b919050565b6040805180820190915260018152600d60fa1b60208201526001600160a01b03821661037c5760405162461bcd60e51b815260040161036991906110d7565b610bb882826104fb565b61037c57610bd0816001600160a01b03166014610c12565b610bdb836020610c12565b604051602001610bec92919061110a565b60408051601f198184030181529082905262461bcd60e51b8252610369916004016110d7565b60606000610c2183600261118f565b610c2c9060026111ae565b67ffffffffffffffff811115610c4457610c44610e80565b6040519080825280601f01601f191660200182016040528015610c6e576020820181803683370190505b509050600360fc1b81600081518110610c8957610c896111c6565b60200101906001600160f81b031916908160001a905350600f60fb1b81600181518110610cb857610cb86111c6565b60200101906001600160f81b031916908160001a9053506000610cdc84600261118f565b610ce79060016111ae565b90505b6001811115610d5f576f181899199a1a9b1b9c1cb0b131b232b360811b85600f1660108110610d1b57610d1b6111c6565b1a60f81b828281518110610d3157610d316111c6565b60200101906001600160f81b031916908160001a90535060049490941c93610d58816111dc565b9050610cea565b508315610dae5760405162461bcd60e51b815260206004820181905260248201527f537472696e67733a20686578206c656e67746820696e73756666696369656e746044820152606401610369565b9392505050565b600060208284031215610dc757600080fd5b81356001600160e01b031981168114610dae57600080fd5b600060208284031215610df157600080fd5b5035919050565b80356001600160a01b0381168114610b6a57600080fd5b60008060408385031215610e2257600080fd5b82359150610e3260208401610df8565b90509250929050565b600060208284031215610e4d57600080fd5b610dae82610df8565b60008060408385031215610e6957600080fd5b610e7283610df8565b9150610e3260208401610df8565b634e487b7160e01b600052604160045260246000fd5b6040805190810167ffffffffffffffff81118282101715610ec757634e487b7160e01b600052604160045260246000fd5b60405290565b604051610240810167ffffffffffffffff81118282101715610ec757634e487b7160e01b600052604160045260246000fd5b60008060006102a08486031215610f1557600080fd5b84601f850112610f2457600080fd5b610f2c610e96565b806040860187811115610f3e57600080fd5b865b81811015610f5f57610f5181610df8565b845260209384019301610f40565b5081955087605f880112610f7257600080fd5b610f7a610ecd565b9250829150610280870188811115610f9157600080fd5b5b80821015610fad578135845260209384019390910190610f92565b95989197505093359450505050565b8060005b6002811015610fe85781516001600160a01b0316845260209384019390910190600101610fc0565b50505050565b8060005b6012811015610fe8578151845260209384019390910190600101610ff2565b6102c081016110208287610fbc565b61102d6040830186610fee565b6001600160a01b03939093166102808201526102a0015292915050565b6102a081016110598286610fbc565b6110666040830185610fee565b6001600160a01b0392909216610280919091015292915050565b6102a0810161108f8286610fbc565b61109c6040830185610fee565b82610280830152949350505050565b60005b838110156110c65781810151838201526020016110ae565b83811115610fe85750506000910152565b60208152600082518060208401526110f68160408501602087016110ab565b601f01601f19169190910160400192915050565b76020b1b1b2b9b9a1b7b73a3937b61d1030b1b1b7bab73a1604d1b81526000835161113c8160178501602088016110ab565b7001034b99036b4b9b9b4b733903937b6329607d1b601791840191820152835161116d8160288401602088016110ab565b01602801949350505050565b634e487b7160e01b600052601160045260246000fd5b60008160001904831182151516156111a9576111a9611179565b500290565b600082198211156111c1576111c1611179565b500190565b634e487b7160e01b600052603260045260246000fd5b6000816111eb576111eb611179565b50600019019056feb19546dff01e856fb3f010c267a7b1c60363cf8a4664e21cc89c26224620214ea26469706673582212207017736fb156fbd8a3adc1270522d9d7275409aa8e71ad20cfb1f5c76f518bfb64736f6c634300080a0033",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {
+      "createPool(address[2],uint256[18],uint256)": {
+        "details": "Only has one pool address respectively for one input params",
+        "params": {
+          "addrs": "Array of address includes: - address of IDO token, - address of purchase token",
+          "dbProjectId": "Project Id in database",
+          "uints": "Array of pool information includes: - max purchase amount for KYC user, - max purchase amount for Not KYC user, - token project fee percentage, // will be sent to admin if success or investor in vice versa - galaxy participation fee percentage, // will be sent to admin - crowdfunding participation fee percentage, // will be sent to admin - galaxy pool proportion, (ratio with all project) - early access proportion, (ratio with only crowdfunding pool) - total raise amount, - whale open time, - whale duration, - community duration, - rate of IDO token (based on formula in README), - decimal of IDO token (based on formula in README, is different from decimals in contract of IDO token), - TGE date, - TGE percentage, - vesting cliff, - vesting frequency, - number of vesting release"
+        },
+        "returns": {
+          "pool": "Address of new pool"
+        }
+      },
+      "getRoleAdmin(bytes32)": {
+        "details": "Returns the admin role that controls `role`. See {grantRole} and {revokeRole}. To change a role's admin, use {_setRoleAdmin}."
+      },
+      "grantRole(bytes32,address)": {
+        "details": "Grants `role` to `account`. If `account` had not been already granted `role`, emits a {RoleGranted} event. Requirements: - the caller must have ``role``'s admin role. May emit a {RoleGranted} event."
+      },
+      "hasRole(bytes32,address)": {
+        "details": "Returns `true` if `account` has been granted `role`."
+      },
+      "initialize(address,address)": {
+        "details": "Called only once",
+        "params": {
+          "_poolImplementationAddress": "Address of pool implementation"
+        }
+      },
+      "paused()": {
+        "details": "Returns true if the contract is paused, and false otherwise."
+      },
+      "renounceRole(bytes32,address)": {
+        "details": "Revokes `role` from the calling account. Roles are often managed via {grantRole} and {revokeRole}: this function's purpose is to provide a mechanism for accounts to lose their privileges if they are compromised (such as when a trusted device is misplaced). If the calling account had been revoked `role`, emits a {RoleRevoked} event. Requirements: - the caller must be `account`. May emit a {RoleRevoked} event."
+      },
+      "revokeRole(bytes32,address)": {
+        "details": "Revokes `role` from `account`. If `account` had been granted `role`, emits a {RoleRevoked} event. Requirements: - the caller must have ``role``'s admin role. May emit a {RoleRevoked} event."
+      },
+      "setPoolImplementation(address)": {
+        "details": "Only admin can can call it",
+        "params": {
+          "_poolImplementationAddress": "Address of new pool implementation"
+        }
+      },
+      "setVestingImplementation(address)": {
+        "details": "Only admin can can call it",
+        "params": {
+          "_vestingImplementationAddress": "Address of new vesting implementation"
+        }
+      },
+      "supportsInterface(bytes4)": {
+        "details": "See {IERC165-supportsInterface}."
+      }
+    },
+    "stateVariables": {
+      "poolImplementationAddress": {
+        "details": "Address of pool implementation"
+      },
+      "vestingImplementationAddress": {
+        "details": "Address of vesting implementation"
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {
+      "OWNER_ROLE()": {
+        "notice": "keccak256(\"OWNER_ROLE\")"
+      },
+      "createPool(address[2],uint256[18],uint256)": {
+        "notice": "Create new pool. One pool has 2 sub-pool: galaxy pool and crowfunding pool, with 2 different participation fee. In crowfunding pool, there is a part for WHALE to buy early (called EARLY ACCESS) and another for NORMAL user to buy (called NORMAL ACCESS). Duration of galaxy pool and EARLY ACCESS are same and before duration of NORMAL ACCESS. There are 3 types of profit: participation fee, token fee and collaborator profit. Token fee + Collaborator profit = total raise amount (IDO token) * price = purchased amount (purchase token) Investors need to pay purchase amount and participation fee If project is success (not be cancelled by admin or funded enough IDO token),  - System's admin claims participation fee and token fee    (call pool.claimParticipationFee(), pool.claimTokenFee())  - Collaborator claims collaborator profit (purchased amount - token fee) based on vesting rule    (call pool.claimProfit())  - Investors claim IDO token based on vesting rule  - Collaborator withdraws redundant IDO token    (call pool.withdrawRedundantIDOToken()) If project is fail (cancelled or not be funded enough IDO token) (of course before TGE date)  - System's admin claims participation fee    (call pool.claimParticipationFee())  - Investors withdraw purchased amount    (call pool.withdrawPurchasedAmount())  - Collaborator withdraws funded IDO token    (call pool.withdrawRedundantIDOToken())"
+      },
+      "initialize(address,address)": {
+        "notice": "Initialize pool factory with address of pool implementation"
+      },
+      "setPoolImplementation(address)": {
+        "notice": "Set or change address of pool implementation"
+      },
+      "setVestingImplementation(address)": {
+        "notice": "Set or change address of vesting implementation"
+      }
+    },
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 10221,
+        "contract": "contracts/core/IgnitionFactory.sol:IgnitionFactory",
+        "label": "_roles",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_mapping(t_bytes32,t_struct(RoleData)10216_storage)"
+      },
+      {
+        "astId": 10696,
+        "contract": "contracts/core/IgnitionFactory.sol:IgnitionFactory",
+        "label": "_paused",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_bool"
+      },
+      {
+        "astId": 10568,
+        "contract": "contracts/core/IgnitionFactory.sol:IgnitionFactory",
+        "label": "_initialized",
+        "offset": 1,
+        "slot": "1",
+        "type": "t_uint8"
+      },
+      {
+        "astId": 10571,
+        "contract": "contracts/core/IgnitionFactory.sol:IgnitionFactory",
+        "label": "_initializing",
+        "offset": 2,
+        "slot": "1",
+        "type": "t_bool"
+      },
+      {
+        "astId": 10797,
+        "contract": "contracts/core/IgnitionFactory.sol:IgnitionFactory",
+        "label": "_status",
+        "offset": 0,
+        "slot": "2",
+        "type": "t_uint256"
+      },
+      {
+        "astId": 3073,
+        "contract": "contracts/core/IgnitionFactory.sol:IgnitionFactory",
+        "label": "poolImplementationAddress",
+        "offset": 0,
+        "slot": "3",
+        "type": "t_address"
+      },
+      {
+        "astId": 3076,
+        "contract": "contracts/core/IgnitionFactory.sol:IgnitionFactory",
+        "label": "vestingImplementationAddress",
+        "offset": 0,
+        "slot": "4",
+        "type": "t_address"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_bool": {
+        "encoding": "inplace",
+        "label": "bool",
+        "numberOfBytes": "1"
+      },
+      "t_bytes32": {
+        "encoding": "inplace",
+        "label": "bytes32",
+        "numberOfBytes": "32"
+      },
+      "t_mapping(t_address,t_bool)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => bool)",
+        "numberOfBytes": "32",
+        "value": "t_bool"
+      },
+      "t_mapping(t_bytes32,t_struct(RoleData)10216_storage)": {
+        "encoding": "mapping",
+        "key": "t_bytes32",
+        "label": "mapping(bytes32 => struct AccessControl.RoleData)",
+        "numberOfBytes": "32",
+        "value": "t_struct(RoleData)10216_storage"
+      },
+      "t_struct(RoleData)10216_storage": {
+        "encoding": "inplace",
+        "label": "struct AccessControl.RoleData",
+        "members": [
+          {
+            "astId": 10213,
+            "contract": "contracts/core/IgnitionFactory.sol:IgnitionFactory",
+            "label": "members",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_mapping(t_address,t_bool)"
+          },
+          {
+            "astId": 10215,
+            "contract": "contracts/core/IgnitionFactory.sol:IgnitionFactory",
+            "label": "adminRole",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_bytes32"
+          }
+        ],
+        "numberOfBytes": "64"
+      },
+      "t_uint256": {
+        "encoding": "inplace",
+        "label": "uint256",
+        "numberOfBytes": "32"
+      },
+      "t_uint8": {
+        "encoding": "inplace",
+        "label": "uint8",
+        "numberOfBytes": "1"
+      }
+    }
+  }
+}

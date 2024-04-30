@@ -1,0 +1,625 @@
+{
+    "methods": {
+        "DEFAULT_ADMIN_ROLE()": {
+            "stateMutability": "view",
+            "code": "function DEFAULT_ADMIN_ROLE() external view returns (bytes32)",
+            "inputs": {},
+            "outputs": {
+                "_0": {
+                    "type": "bytes32"
+                }
+            }
+        },
+        "IDOToken()": {
+            "stateMutability": "view",
+            "code": "function IDOToken() external view returns (contract IERC20withDec)",
+            "inputs": {},
+            "outputs": {
+                "_0": {
+                    "type": "contract IERC20withDec"
+                }
+            },
+            "notice": "Address of IDO token"
+        },
+        "OWNER_ROLE()": {
+            "stateMutability": "view",
+            "code": "function OWNER_ROLE() external view returns (bytes32)",
+            "inputs": {},
+            "outputs": {
+                "_0": {
+                    "type": "bytes32"
+                }
+            },
+            "notice": "keccak256(\"OWNER_ROLE\")"
+        },
+        "PERCENTAGE_DENOMINATOR()": {
+            "stateMutability": "view",
+            "code": "function PERCENTAGE_DENOMINATOR() external view returns (uint16)",
+            "inputs": {},
+            "outputs": {
+                "_0": {
+                    "type": "uint16"
+                }
+            },
+            "notice": "Percentage denominator"
+        },
+        "TGEDate()": {
+            "stateMutability": "view",
+            "code": "function TGEDate() external view returns (uint64)",
+            "inputs": {},
+            "outputs": {
+                "_0": {
+                    "type": "uint64"
+                }
+            },
+            "notice": "Time for user to redeem IDO token"
+        },
+        "TGEPercentage()": {
+            "stateMutability": "view",
+            "code": "function TGEPercentage() external view returns (uint16)",
+            "inputs": {},
+            "outputs": {
+                "_0": {
+                    "type": "uint16"
+                }
+            },
+            "notice": "Percentage of IDO token amount of user, which can be redeemed after TGEDate"
+        },
+        "__BasePausable__init(address)": {
+            "stateMutability": "nonpayable",
+            "code": "function __BasePausable__init(address owner) external nonpayable",
+            "inputs": {
+                "owner": {
+                    "type": "address"
+                }
+            },
+            "outputs": {}
+        },
+        "claimIDOToken(address)": {
+            "stateMutability": "nonpayable",
+            "code": "function claimIDOToken(address _beneficiary) external nonpayable",
+            "inputs": {
+                "_beneficiary": {
+                    "type": "address"
+                }
+            },
+            "outputs": {}
+        },
+        "claimable()": {
+            "stateMutability": "view",
+            "code": "function claimable() external view returns (bool)",
+            "inputs": {},
+            "outputs": {
+                "_0": {
+                    "type": "bool"
+                }
+            },
+            "notice": "True if admin allow user to claim"
+        },
+        "createVestingSchedule(address,uint256)": {
+            "stateMutability": "nonpayable",
+            "code": "function createVestingSchedule(address _user, uint256 _totalAmount) external nonpayable",
+            "inputs": {
+                "_user": {
+                    "type": "address"
+                },
+                "_totalAmount": {
+                    "type": "uint256"
+                }
+            },
+            "outputs": {}
+        },
+        "emergencyCancelled()": {
+            "stateMutability": "view",
+            "code": "function emergencyCancelled() external view returns (bool)",
+            "inputs": {},
+            "outputs": {
+                "_0": {
+                    "type": "bool"
+                }
+            }
+        },
+        "funded()": {
+            "stateMutability": "view",
+            "code": "function funded() external view returns (bool)",
+            "inputs": {},
+            "outputs": {
+                "_0": {
+                    "type": "bool"
+                }
+            },
+            "notice": "True if collaborator fund enough IDO token"
+        },
+        "getClaimableAmount(address)": {
+            "stateMutability": "view",
+            "code": "function getClaimableAmount(address user) external view returns (uint256)",
+            "inputs": {
+                "user": {
+                    "type": "address"
+                }
+            },
+            "outputs": {
+                "_0": {
+                    "type": "uint256"
+                }
+            }
+        },
+        "getIDOToken()": {
+            "stateMutability": "view",
+            "code": "function getIDOToken() external view returns (contract IERC20withDec)",
+            "inputs": {},
+            "outputs": {
+                "_0": {
+                    "type": "contract IERC20withDec"
+                }
+            }
+        },
+        "getRoleAdmin(bytes32)": {
+            "stateMutability": "view",
+            "code": "function getRoleAdmin(bytes32 role) external view returns (bytes32)",
+            "inputs": {
+                "role": {
+                    "type": "bytes32"
+                }
+            },
+            "outputs": {
+                "_0": {
+                    "type": "bytes32"
+                }
+            },
+            "details": "Returns the admin role that controls `role`. See {grantRole} and {revokeRole}. To change a role's admin, use {_setRoleAdmin}."
+        },
+        "getVestingInfo()": {
+            "stateMutability": "view",
+            "code": "function getVestingInfo() external view returns (uint64, uint16, uint64, uint64, uint256)",
+            "inputs": {},
+            "outputs": {
+                "_0": {
+                    "type": "uint64"
+                },
+                "_1": {
+                    "type": "uint16"
+                },
+                "_2": {
+                    "type": "uint64"
+                },
+                "_3": {
+                    "type": "uint64"
+                },
+                "_4": {
+                    "type": "uint256"
+                }
+            }
+        },
+        "grantRole(bytes32,address)": {
+            "stateMutability": "nonpayable",
+            "code": "function grantRole(bytes32 role, address account) external nonpayable",
+            "inputs": {
+                "role": {
+                    "type": "bytes32"
+                },
+                "account": {
+                    "type": "address"
+                }
+            },
+            "outputs": {},
+            "details": "Grants `role` to `account`. If `account` had not been already granted `role`, emits a {RoleGranted} event. Requirements: - the caller must have ``role``'s admin role. May emit a {RoleGranted} event."
+        },
+        "hasRole(bytes32,address)": {
+            "stateMutability": "view",
+            "code": "function hasRole(bytes32 role, address account) external view returns (bool)",
+            "inputs": {
+                "role": {
+                    "type": "bytes32"
+                },
+                "account": {
+                    "type": "address"
+                }
+            },
+            "outputs": {
+                "_0": {
+                    "type": "bool"
+                }
+            },
+            "details": "Returns `true` if `account` has been granted `role`."
+        },
+        "initialize(address,address,uint256,uint256,uint256,uint256,uint256)": {
+            "stateMutability": "nonpayable",
+            "code": "function initialize(address owner, address _IDOToken, uint256 _TGEDate, uint256 _TGEPercentage, uint256 _vestingCliff, uint256 _vestingFrequency, uint256 _numberOfVestingRelease) external nonpayable",
+            "inputs": {
+                "owner": {
+                    "type": "address"
+                },
+                "_IDOToken": {
+                    "type": "address"
+                },
+                "_TGEDate": {
+                    "type": "uint256"
+                },
+                "_TGEPercentage": {
+                    "type": "uint256"
+                },
+                "_vestingCliff": {
+                    "type": "uint256"
+                },
+                "_vestingFrequency": {
+                    "type": "uint256"
+                },
+                "_numberOfVestingRelease": {
+                    "type": "uint256"
+                }
+            },
+            "outputs": {}
+        },
+        "isClaimable()": {
+            "stateMutability": "view",
+            "code": "function isClaimable() external view returns (bool)",
+            "inputs": {},
+            "outputs": {
+                "_0": {
+                    "type": "bool"
+                }
+            }
+        },
+        "isEmergencyCancelled()": {
+            "stateMutability": "view",
+            "code": "function isEmergencyCancelled() external view returns (bool)",
+            "inputs": {},
+            "outputs": {
+                "_0": {
+                    "type": "bool"
+                }
+            }
+        },
+        "isFunded()": {
+            "stateMutability": "view",
+            "code": "function isFunded() external view returns (bool)",
+            "inputs": {},
+            "outputs": {
+                "_0": {
+                    "type": "bool"
+                }
+            }
+        },
+        "isOwner(address)": {
+            "stateMutability": "view",
+            "code": "function isOwner(address sender) external view returns (bool)",
+            "inputs": {
+                "sender": {
+                    "type": "address"
+                }
+            },
+            "outputs": {
+                "_0": {
+                    "type": "bool"
+                }
+            }
+        },
+        "numberOfVestingRelease()": {
+            "stateMutability": "view",
+            "code": "function numberOfVestingRelease() external view returns (uint256)",
+            "inputs": {},
+            "outputs": {
+                "_0": {
+                    "type": "uint256"
+                }
+            },
+            "notice": "Number of vesting release"
+        },
+        "paused()": {
+            "stateMutability": "view",
+            "code": "function paused() external view returns (bool)",
+            "inputs": {},
+            "outputs": {
+                "_0": {
+                    "type": "bool"
+                }
+            },
+            "details": "Returns true if the contract is paused, and false otherwise."
+        },
+        "renounceRole(bytes32,address)": {
+            "stateMutability": "nonpayable",
+            "code": "function renounceRole(bytes32 role, address account) external nonpayable",
+            "inputs": {
+                "role": {
+                    "type": "bytes32"
+                },
+                "account": {
+                    "type": "address"
+                }
+            },
+            "outputs": {},
+            "details": "Revokes `role` from the calling account. Roles are often managed via {grantRole} and {revokeRole}: this function's purpose is to provide a mechanism for accounts to lose their privileges if they are compromised (such as when a trusted device is misplaced). If the calling account had been revoked `role`, emits a {RoleRevoked} event. Requirements: - the caller must be `account`. May emit a {RoleRevoked} event."
+        },
+        "revokeRole(bytes32,address)": {
+            "stateMutability": "nonpayable",
+            "code": "function revokeRole(bytes32 role, address account) external nonpayable",
+            "inputs": {
+                "role": {
+                    "type": "bytes32"
+                },
+                "account": {
+                    "type": "address"
+                }
+            },
+            "outputs": {},
+            "details": "Revokes `role` from `account`. If `account` had been granted `role`, emits a {RoleRevoked} event. Requirements: - the caller must have ``role``'s admin role. May emit a {RoleRevoked} event."
+        },
+        "setClaimableStatus(bool)": {
+            "stateMutability": "nonpayable",
+            "code": "function setClaimableStatus(bool _status) external nonpayable",
+            "inputs": {
+                "_status": {
+                    "type": "bool"
+                }
+            },
+            "outputs": {}
+        },
+        "setEmergencyCancelled(bool)": {
+            "stateMutability": "nonpayable",
+            "code": "function setEmergencyCancelled(bool _status) external nonpayable",
+            "inputs": {
+                "_status": {
+                    "type": "bool"
+                }
+            },
+            "outputs": {}
+        },
+        "setFundedStatus(bool)": {
+            "stateMutability": "nonpayable",
+            "code": "function setFundedStatus(bool _status) external nonpayable",
+            "inputs": {
+                "_status": {
+                    "type": "bool"
+                }
+            },
+            "outputs": {}
+        },
+        "setIDOToken(address)": {
+            "stateMutability": "nonpayable",
+            "code": "function setIDOToken(contract IERC20withDec _IDOToken) external nonpayable",
+            "inputs": {
+                "_IDOToken": {
+                    "type": "contract IERC20withDec"
+                }
+            },
+            "outputs": {}
+        },
+        "supportsInterface(bytes4)": {
+            "stateMutability": "view",
+            "code": "function supportsInterface(bytes4 interfaceId) external view returns (bool)",
+            "inputs": {
+                "interfaceId": {
+                    "type": "bytes4"
+                }
+            },
+            "outputs": {
+                "_0": {
+                    "type": "bool"
+                }
+            },
+            "details": "See {IERC165-supportsInterface}."
+        },
+        "updateTGEDate(uint64)": {
+            "stateMutability": "nonpayable",
+            "code": "function updateTGEDate(uint64 _TGEDate) external nonpayable",
+            "inputs": {
+                "_TGEDate": {
+                    "type": "uint64"
+                }
+            },
+            "outputs": {}
+        },
+        "vestingAmountInfo(address)": {
+            "stateMutability": "view",
+            "code": "function vestingAmountInfo(address) external view returns (uint256 totalAmount, uint256 claimedAmount)",
+            "inputs": {
+                "_0": {
+                    "type": "address"
+                }
+            },
+            "outputs": {
+                "totalAmount": {
+                    "type": "uint256"
+                },
+                "claimedAmount": {
+                    "type": "uint256"
+                }
+            },
+            "notice": "vesting info of each user"
+        },
+        "vestingCliff()": {
+            "stateMutability": "view",
+            "code": "function vestingCliff() external view returns (uint64)",
+            "inputs": {},
+            "outputs": {
+                "_0": {
+                    "type": "uint64"
+                }
+            },
+            "notice": "Vesting cliff"
+        },
+        "vestingFrequency()": {
+            "stateMutability": "view",
+            "code": "function vestingFrequency() external view returns (uint64)",
+            "inputs": {},
+            "outputs": {
+                "_0": {
+                    "type": "uint64"
+                }
+            },
+            "notice": "Vesting frequency"
+        },
+        "withdrawRedundantIDOToken(address,uint256)": {
+            "stateMutability": "nonpayable",
+            "code": "function withdrawRedundantIDOToken(address _beneficiary, uint256 _redundantAmount) external nonpayable",
+            "inputs": {
+                "_beneficiary": {
+                    "type": "address"
+                },
+                "_redundantAmount": {
+                    "type": "uint256"
+                }
+            },
+            "outputs": {}
+        }
+    },
+    "events": {
+        "ClaimIDOToken": {
+            "code": "event ClaimIDOToken(address sender, address beneficiary, uint256 claimableAmount)",
+            "inputs": {
+                "sender": {
+                    "type": "address",
+                    "indexed": false
+                },
+                "beneficiary": {
+                    "type": "address",
+                    "indexed": false
+                },
+                "claimableAmount": {
+                    "type": "uint256",
+                    "indexed": false
+                }
+            }
+        },
+        "Funded": {
+            "code": "event Funded(bool status)",
+            "inputs": {
+                "status": {
+                    "type": "bool",
+                    "indexed": false
+                }
+            }
+        },
+        "Initialized": {
+            "code": "event Initialized(uint8 version)",
+            "inputs": {
+                "version": {
+                    "type": "uint8",
+                    "indexed": false
+                }
+            }
+        },
+        "Paused": {
+            "code": "event Paused(address account)",
+            "inputs": {
+                "account": {
+                    "type": "address",
+                    "indexed": false
+                }
+            }
+        },
+        "RoleAdminChanged": {
+            "code": "event RoleAdminChanged(bytes32 indexed role, bytes32 indexed previousAdminRole, bytes32 indexed newAdminRole)",
+            "inputs": {
+                "role": {
+                    "type": "bytes32",
+                    "indexed": true
+                },
+                "previousAdminRole": {
+                    "type": "bytes32",
+                    "indexed": true
+                },
+                "newAdminRole": {
+                    "type": "bytes32",
+                    "indexed": true
+                }
+            }
+        },
+        "RoleGranted": {
+            "code": "event RoleGranted(bytes32 indexed role, address indexed account, address indexed sender)",
+            "inputs": {
+                "role": {
+                    "type": "bytes32",
+                    "indexed": true
+                },
+                "account": {
+                    "type": "address",
+                    "indexed": true
+                },
+                "sender": {
+                    "type": "address",
+                    "indexed": true
+                }
+            }
+        },
+        "RoleRevoked": {
+            "code": "event RoleRevoked(bytes32 indexed role, address indexed account, address indexed sender)",
+            "inputs": {
+                "role": {
+                    "type": "bytes32",
+                    "indexed": true
+                },
+                "account": {
+                    "type": "address",
+                    "indexed": true
+                },
+                "sender": {
+                    "type": "address",
+                    "indexed": true
+                }
+            }
+        },
+        "SetClaimableStatus": {
+            "code": "event SetClaimableStatus(bool status)",
+            "inputs": {
+                "status": {
+                    "type": "bool",
+                    "indexed": false
+                }
+            }
+        },
+        "SetEmergencyCancelled": {
+            "code": "event SetEmergencyCancelled(bool status)",
+            "inputs": {
+                "status": {
+                    "type": "bool",
+                    "indexed": false
+                }
+            }
+        },
+        "SetIDOTokenAddress": {
+            "code": "event SetIDOTokenAddress(address IDOToken)",
+            "inputs": {
+                "IDOToken": {
+                    "type": "address",
+                    "indexed": false
+                }
+            }
+        },
+        "Unpaused": {
+            "code": "event Unpaused(address account)",
+            "inputs": {
+                "account": {
+                    "type": "address",
+                    "indexed": false
+                }
+            }
+        },
+        "UpdateTGEDate": {
+            "code": "event UpdateTGEDate(uint64 newTGEDate)",
+            "inputs": {
+                "newTGEDate": {
+                    "type": "uint64",
+                    "indexed": false
+                }
+            }
+        },
+        "WithdrawRedundantIDOToken": {
+            "code": "event WithdrawRedundantIDOToken(address beneficiary, uint256 redundantAmount)",
+            "inputs": {
+                "beneficiary": {
+                    "type": "address",
+                    "indexed": false
+                },
+                "redundantAmount": {
+                    "type": "uint256",
+                    "indexed": false
+                }
+            }
+        }
+    },
+    "errors": {},
+    "path": "contracts/core",
+    "name": "Vesting"
+}

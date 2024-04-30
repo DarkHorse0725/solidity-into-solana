@@ -1,0 +1,382 @@
+{
+    "methods": {
+        "DOMAIN_SEPARATOR()": {
+            "stateMutability": "view",
+            "code": "function DOMAIN_SEPARATOR() external view returns (bytes32)",
+            "inputs": {},
+            "outputs": {
+                "_0": {
+                    "type": "bytes32"
+                }
+            }
+        },
+        "FUND_TYPEHASH()": {
+            "stateMutability": "view",
+            "code": "function FUND_TYPEHASH() external view returns (bytes32)",
+            "inputs": {},
+            "outputs": {
+                "_0": {
+                    "type": "bytes32"
+                }
+            }
+        },
+        "NORMAL_USER()": {
+            "stateMutability": "view",
+            "code": "function NORMAL_USER() external view returns (bytes32)",
+            "inputs": {},
+            "outputs": {
+                "_0": {
+                    "type": "bytes32"
+                }
+            },
+            "details": "keccak256(\"NORMAL_USER\")"
+        },
+        "PERCENTAGE_DENOMINATOR()": {
+            "stateMutability": "view",
+            "code": "function PERCENTAGE_DENOMINATOR() external view returns (uint16)",
+            "inputs": {},
+            "outputs": {
+                "_0": {
+                    "type": "uint16"
+                }
+            },
+            "details": "Percentage denominator"
+        },
+        "WHALE()": {
+            "stateMutability": "view",
+            "code": "function WHALE() external view returns (bytes32)",
+            "inputs": {},
+            "outputs": {
+                "_0": {
+                    "type": "bytes32"
+                }
+            },
+            "details": "keccak256(\"WHALE\")"
+        },
+        "communityCloseTime()": {
+            "stateMutability": "view",
+            "code": "function communityCloseTime() external view returns (uint64)",
+            "inputs": {},
+            "outputs": {
+                "_0": {
+                    "type": "uint64"
+                }
+            },
+            "details": "Close time of crowdfunding pool"
+        },
+        "communityOpenTime()": {
+            "stateMutability": "view",
+            "code": "function communityOpenTime() external view returns (uint64)",
+            "inputs": {},
+            "outputs": {
+                "_0": {
+                    "type": "uint64"
+                }
+            },
+            "details": "Open time for community user = Close time of galaxy pool"
+        },
+        "crowdfundingParticipationFeePercentage()": {
+            "stateMutability": "view",
+            "code": "function crowdfundingParticipationFeePercentage() external view returns (uint16)",
+            "inputs": {},
+            "outputs": {
+                "_0": {
+                    "type": "uint16"
+                }
+            },
+            "details": "Fee percentage when buying token in crowdfunding pool"
+        },
+        "earlyAccessProportion()": {
+            "stateMutability": "view",
+            "code": "function earlyAccessProportion() external view returns (uint16)",
+            "inputs": {},
+            "outputs": {
+                "_0": {
+                    "type": "uint16"
+                }
+            },
+            "details": "Proportion of crowdfunding pool amount for early access"
+        },
+        "fundClaimedAmount()": {
+            "stateMutability": "view",
+            "code": "function fundClaimedAmount() external view returns (uint256)",
+            "inputs": {},
+            "outputs": {
+                "_0": {
+                    "type": "uint256"
+                }
+            },
+            "details": "Fund amount which is claimed by collaborator (exclude token fee)"
+        },
+        "galaxyParticipationFeePercentage()": {
+            "stateMutability": "view",
+            "code": "function galaxyParticipationFeePercentage() external view returns (uint16)",
+            "inputs": {},
+            "outputs": {
+                "_0": {
+                    "type": "uint16"
+                }
+            },
+            "details": "Fee percentage when buying token in galaxy pool"
+        },
+        "galaxyPoolProportion()": {
+            "stateMutability": "view",
+            "code": "function galaxyPoolProportion() external view returns (uint16)",
+            "inputs": {},
+            "outputs": {
+                "_0": {
+                    "type": "uint16"
+                }
+            },
+            "details": "Proportion of total raise for galaxy pool"
+        },
+        "ignitionFactory()": {
+            "stateMutability": "view",
+            "code": "function ignitionFactory() external view returns (contract IIgnitionFactory)",
+            "inputs": {},
+            "outputs": {
+                "_0": {
+                    "type": "contract IIgnitionFactory"
+                }
+            },
+            "details": "Address of pool factory"
+        },
+        "maxPurchaseAmountForEarlyAccess()": {
+            "stateMutability": "view",
+            "code": "function maxPurchaseAmountForEarlyAccess() external view returns (uint256)",
+            "inputs": {},
+            "outputs": {
+                "_0": {
+                    "type": "uint256"
+                }
+            },
+            "details": "Max purchase amount for early access = (total raise amount - total raise amount * galaxy pool proportion) * early access proportion"
+        },
+        "maxPurchaseAmountForGalaxyPool()": {
+            "stateMutability": "view",
+            "code": "function maxPurchaseAmountForGalaxyPool() external view returns (uint256)",
+            "inputs": {},
+            "outputs": {
+                "_0": {
+                    "type": "uint256"
+                }
+            },
+            "details": "Max purchase amount for galaxy pool = total raise amount * galaxy pool proportion"
+        },
+        "maxPurchaseAmountForKYCUser()": {
+            "stateMutability": "view",
+            "code": "function maxPurchaseAmountForKYCUser() external view returns (uint256)",
+            "inputs": {},
+            "outputs": {
+                "_0": {
+                    "type": "uint256"
+                }
+            },
+            "details": "Max purchase amount for KYC user"
+        },
+        "maxPurchaseAmountForNotKYCUser()": {
+            "stateMutability": "view",
+            "code": "function maxPurchaseAmountForNotKYCUser() external view returns (uint256)",
+            "inputs": {},
+            "outputs": {
+                "_0": {
+                    "type": "uint256"
+                }
+            },
+            "details": "Max purchase amount for NOT KYC user"
+        },
+        "name()": {
+            "stateMutability": "view",
+            "code": "function name() external view returns (string)",
+            "inputs": {},
+            "outputs": {
+                "_0": {
+                    "type": "string"
+                }
+            },
+            "details": "Name used for fund signature"
+        },
+        "offeredCurrency()": {
+            "stateMutability": "view",
+            "code": "function offeredCurrency() external view returns (uint256 rate, uint256 decimal)",
+            "inputs": {},
+            "outputs": {
+                "rate": {
+                    "type": "uint256"
+                },
+                "decimal": {
+                    "type": "uint256"
+                }
+            },
+            "details": "Store rate and decimal to display price of IDO token"
+        },
+        "participationFeeAmount()": {
+            "stateMutability": "view",
+            "code": "function participationFeeAmount() external view returns (uint256)",
+            "inputs": {},
+            "outputs": {
+                "_0": {
+                    "type": "uint256"
+                }
+            },
+            "details": "Participation fee in all sub-pool (based on purchase token)"
+        },
+        "participationFeeClaimedStatus()": {
+            "stateMutability": "view",
+            "code": "function participationFeeClaimedStatus() external view returns (bool)",
+            "inputs": {},
+            "outputs": {
+                "_0": {
+                    "type": "bool"
+                }
+            },
+            "details": "True if participation fee is claimed"
+        },
+        "purchaseToken()": {
+            "stateMutability": "view",
+            "code": "function purchaseToken() external view returns (contract IERC20)",
+            "inputs": {},
+            "outputs": {
+                "_0": {
+                    "type": "contract IERC20"
+                }
+            },
+            "details": "Address of purchase token"
+        },
+        "purchasedAmount()": {
+            "stateMutability": "view",
+            "code": "function purchasedAmount() external view returns (uint256)",
+            "inputs": {},
+            "outputs": {
+                "_0": {
+                    "type": "uint256"
+                }
+            },
+            "details": "Purchased amount in all pools (based on purchase token), do not include participation fee"
+        },
+        "purchasedAmountInEarlyAccess()": {
+            "stateMutability": "view",
+            "code": "function purchasedAmountInEarlyAccess() external view returns (uint256)",
+            "inputs": {},
+            "outputs": {
+                "_0": {
+                    "type": "uint256"
+                }
+            },
+            "details": "Purchased amount in early access (based on purchase token), do not include participation fee"
+        },
+        "purchasedAmountInGalaxyPool()": {
+            "stateMutability": "view",
+            "code": "function purchasedAmountInGalaxyPool() external view returns (uint256)",
+            "inputs": {},
+            "outputs": {
+                "_0": {
+                    "type": "uint256"
+                }
+            },
+            "details": "Purchased amount in galaxy pool (based on purchase token), do not include participation fee"
+        },
+        "tokenFeeClaimedStatus()": {
+            "stateMutability": "view",
+            "code": "function tokenFeeClaimedStatus() external view returns (bool)",
+            "inputs": {},
+            "outputs": {
+                "_0": {
+                    "type": "bool"
+                }
+            },
+            "details": "True if token fee is claimed"
+        },
+        "tokenFeePercentage()": {
+            "stateMutability": "view",
+            "code": "function tokenFeePercentage() external view returns (uint16)",
+            "inputs": {},
+            "outputs": {
+                "_0": {
+                    "type": "uint16"
+                }
+            },
+            "details": "Token fee to create project"
+        },
+        "totalRaiseAmount()": {
+            "stateMutability": "view",
+            "code": "function totalRaiseAmount() external view returns (uint256)",
+            "inputs": {},
+            "outputs": {
+                "_0": {
+                    "type": "uint256"
+                }
+            },
+            "details": "Total raise amount of all pools (based on purchase token)"
+        },
+        "userPurchasedAmount(address)": {
+            "stateMutability": "view",
+            "code": "function userPurchasedAmount(address) external view returns (uint256 principal, uint256 fee, uint256 withdrawn)",
+            "inputs": {
+                "_0": {
+                    "type": "address"
+                }
+            },
+            "outputs": {
+                "principal": {
+                    "type": "uint256"
+                },
+                "fee": {
+                    "type": "uint256"
+                },
+                "withdrawn": {
+                    "type": "uint256"
+                }
+            },
+            "details": "Mapping from User to purchased amount (based on purchase token)"
+        },
+        "version()": {
+            "stateMutability": "view",
+            "code": "function version() external view returns (string)",
+            "inputs": {},
+            "outputs": {
+                "_0": {
+                    "type": "string"
+                }
+            },
+            "details": "Version used for fund signature"
+        },
+        "vesting()": {
+            "stateMutability": "view",
+            "code": "function vesting() external view returns (contract IVesting)",
+            "inputs": {},
+            "outputs": {
+                "_0": {
+                    "type": "contract IVesting"
+                }
+            },
+            "details": "Vesting contract address"
+        },
+        "whaleCloseTime()": {
+            "stateMutability": "view",
+            "code": "function whaleCloseTime() external view returns (uint64)",
+            "inputs": {},
+            "outputs": {
+                "_0": {
+                    "type": "uint64"
+                }
+            },
+            "details": "Close time of galaxy pool"
+        },
+        "whaleOpenTime()": {
+            "stateMutability": "view",
+            "code": "function whaleOpenTime() external view returns (uint64)",
+            "inputs": {},
+            "outputs": {
+                "_0": {
+                    "type": "uint64"
+                }
+            },
+            "details": "Open time of galaxy pool"
+        }
+    },
+    "events": {},
+    "errors": {},
+    "path": "contracts/core",
+    "name": "PoolStorage"
+}

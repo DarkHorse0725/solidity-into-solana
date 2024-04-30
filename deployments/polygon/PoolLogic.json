@@ -1,0 +1,203 @@
+{
+  "address": "0x5B4f235129ac152D15aF7c5797595851194228B1",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "InvalidEarlyAccessProportion",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "InvalidGalaxyPoolProportion",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "InvalidTime",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "InvalidTokenFeePercentage",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "ZeroAddressNotValid",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "ZeroAmountNotValid",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "PERCENTAGE_DENOMINATOR",
+      "outputs": [
+        {
+          "internalType": "uint16",
+          "name": "",
+          "type": "uint16"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_purchaseAmount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_participationFeePercentage",
+          "type": "uint256"
+        }
+      ],
+      "name": "calculateParticipantFee",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_address",
+          "type": "address"
+        }
+      ],
+      "name": "validAddress",
+      "outputs": [],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "validAmount",
+      "outputs": [],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address[2]",
+          "name": "addrs",
+          "type": "address[2]"
+        },
+        {
+          "internalType": "uint256[18]",
+          "name": "uints",
+          "type": "uint256[18]"
+        }
+      ],
+      "name": "verifyPoolInfo",
+      "outputs": [],
+      "stateMutability": "pure",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0x2012f5009676da60277fdc3b06a0d347298c67a0b430457ce834ad4191724c5c",
+  "receipt": {
+    "to": null,
+    "from": "0x7aB363D60fdf281FDDb5E068FD3f8422c2C6aF9f",
+    "contractAddress": "0x5B4f235129ac152D15aF7c5797595851194228B1",
+    "transactionIndex": 137,
+    "gasUsed": "300049",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000400000000000000000000000000000000000008000000000000000000000000000000000000000000000000000000000800000000000400000000100000000000000000000000000000000000000000000000000000000000080000000002000000000000000000000000000000000000000000000000000000000000000000000200001000000000000000000000000000000000000000000000000000000004000000000000000000001000000000000000000000000000000100000000000000000000000020000000000000000000000000000000000000000000000100000",
+    "blockHash": "0x75c54e7929a4809c2659e4c3fefcb22d0853fc58e4ea14b152f1106722b0433e",
+    "transactionHash": "0x2012f5009676da60277fdc3b06a0d347298c67a0b430457ce834ad4191724c5c",
+    "logs": [
+      {
+        "transactionIndex": 137,
+        "blockNumber": 53846674,
+        "transactionHash": "0x2012f5009676da60277fdc3b06a0d347298c67a0b430457ce834ad4191724c5c",
+        "address": "0x0000000000000000000000000000000000001010",
+        "topics": [
+          "0x4dfe1bbbcf077ddc3e01291eea2d5c70c2b422b415d95645b9adcfd678cb1d63",
+          "0x0000000000000000000000000000000000000000000000000000000000001010",
+          "0x0000000000000000000000007ab363d60fdf281fddb5e068fd3f8422c2c6af9f",
+          "0x0000000000000000000000007c7379531b2aee82e4ca06d4175d13b9cbeafd49"
+        ],
+        "data": "0x000000000000000000000000000000000000000000000000001391a4d2ec850a0000000000000000000000000000000000000000000000002717548fa040b47c00000000000000000000000000000000000000000002c7d216dd29dd17b321670000000000000000000000000000000000000000000000002703c2eacd542f7200000000000000000000000000000000000000000002c7d216f0bb81ea9fa671",
+        "logIndex": 441,
+        "blockHash": "0x75c54e7929a4809c2659e4c3fefcb22d0853fc58e4ea14b152f1106722b0433e"
+      }
+    ],
+    "blockNumber": 53846674,
+    "cumulativeGasUsed": "19993802",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "numDeployments": 1,
+  "solcInputHash": "3f17f81d28b2277b875e901303fac68c",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.23+commit.f704f362\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"InvalidEarlyAccessProportion\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"InvalidGalaxyPoolProportion\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"InvalidTime\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"InvalidTokenFeePercentage\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"ZeroAddressNotValid\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"ZeroAmountNotValid\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"PERCENTAGE_DENOMINATOR\",\"outputs\":[{\"internalType\":\"uint16\",\"name\":\"\",\"type\":\"uint16\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_purchaseAmount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_participationFeePercentage\",\"type\":\"uint256\"}],\"name\":\"calculateParticipantFee\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_address\",\"type\":\"address\"}],\"name\":\"validAddress\",\"outputs\":[],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"}],\"name\":\"validAmount\",\"outputs\":[],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address[2]\",\"name\":\"addrs\",\"type\":\"address[2]\"},{\"internalType\":\"uint256[18]\",\"name\":\"uints\",\"type\":\"uint256[18]\"}],\"name\":\"verifyPoolInfo\",\"outputs\":[],\"stateMutability\":\"pure\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"calculateParticipantFee(uint256,uint256)\":{\"details\":\"Calculate fee when investor buy token\",\"params\":{\"_participationFeePercentage\":\"Fee percentage when buying token\",\"_purchaseAmount\":\"Purchase amount of investor\"},\"returns\":{\"_0\":\"Return amount of fee when investor buy token\"}},\"validAddress(address)\":{\"details\":\"Check whether or not an address is zero address\",\"params\":{\"_address\":\"An address\"}},\"validAmount(uint256)\":{\"details\":\"Check whether or not an amount greater than 0\",\"params\":{\"_amount\":\"An amount\"}},\"verifyPoolInfo(address[2],uint256[18])\":{\"details\":\"verify information of pool\",\"params\":{\"addrs\":\"Array of address includes: - address of IDO token, - address of purchase token\",\"uints\":\"Array of pool information includes: - max purchase amount for KYC user, - max purchase amount for Not KYC user, - token fee percentage, - galaxy participation fee percentage, - crowdfunding participation fee percentage, - galaxy pool proportion, - early access proportion, - total raise amount, - whale open time, - whale duration, - community duration, - rate of IDO token (based on README formula), - decimal of IDO token (based on README formula, is different from decimals in contract of IDO token), - TGE date, - TGE percentage, - vesting cliff, - vesting frequency, - number of vesting release\"}}},\"stateVariables\":{\"PERCENTAGE_DENOMINATOR\":{\"details\":\"Percentage denominator\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/logics/PoolLogic.sol\":\"PoolLogic\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/helpers/Errors.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity 0.8.23;\\n\\nlibrary Errors {\\n    error CallerNotAdmin();\\n    error CallerNotOwner();\\n    error ZeroAmountNotValid();\\n    error ZeroAddressNotValid();\\n    error InvalidTokenFeePercentage();\\n    error InvalidTgePercentage();\\n    error InvalidGalaxyPoolProportion();\\n    error InvalidEarlyAccessProportion();\\n    error InvalidTime();\\n    error InvalidSigner();\\n    error InvalidClaimableAmount();\\n    error NotInWhaleList();\\n    error NotInInvestorList();\\n    error NotEnoughAllowance();\\n    error NotFunded();\\n    error AlreadyClaimTotalAmount();\\n    error TimeOutToBuyIDOToken();\\n\\n    error ExceedMaxPurchaseAmountForUser();\\n    error ExceedTotalRaiseAmount();\\n    error ExceedMaxPurchaseAmountForKYCUser();\\n    error ExceedMaxPurchaseAmountForNonKYCUser();\\n    error ExceedMaxPurchaseAmountForEarlyAccess();\\n\\n    error NotAllowedToClaimIDOToken();\\n    error NotAllowedToClaimTokenFee();\\n    error NotAllowedToDoAfterTGEDate();\\n    error NotAllowedToClaimParticipationFee();\\n    error NotAllowedToWithdrawPurchasedAmount();\\n    error NotAllowedToFundAfterTGEDate();\\n    error NotAllowedToAllowInvestorToClaim();\\n    error NotAllowedToClaimPurchaseToken();\\n    error NotAllowedToTransferBBeforeTGEDate();\\n    error NotAllowedToTransferBeforeLockupTime();\\n    error NotAllowedToDoAfterEmergencyCancelled();\\n    error NotAllowedToCancelAfterLockupTime();\\n    error NotAllowedToExceedTotalRaiseAmount();\\n    error NotAllowedToFundBeforeCommunityTime();\\n\\n    error GalaxyParticipationFeePercentageNotInRange();\\n    error CrowdFundingParticipationFeePercentageNotInRange();\\n\\n    error NotAllowedToAdjustTGEDateExceedsAttempts();\\n\\n    error MaxPurchaseForKYCUserNotValid();\\n\\n    error PoolIsAlreadyFunded();\\n\\n    error NotAllowedToAdjustTGEDateTooFar();\\n\\n    error AlreadyPrivateFunded();\\n\\n    // string public constant CALLER_NOT_ADMIN = \\\"1\\\"; // 'The caller of the function is not an admin'\\n    // string public constant CALLER_NOT_OWNER = \\\"2\\\"; // 'The caller of the funtion is not an owner'\\n    // string public constant ZERO_AMOUNT_NOT_VALID = \\\"3\\\"; // 'Amount must be greater than 0'\\n    // string public constant ZERO_ADDRESS_NOT_VALID = \\\"4\\\"; // 'Zero address not valid'\\n    // string public constant INVALID_TOKEN_FEE_PERCENTAGE = \\\"5\\\"; // 'Token fee must not be greater than 100%'\\n    // string public constant INVALID_TGE_PERCENTAGE = \\\"6\\\"; // 'TGE must be smaller than or equal 100%'\\n    // string public constant INVALID_GALAXY_POOL_PROPORTION = \\\"7\\\"; // 'Galaxy pool proportion must be greater than 0% and smaller than 100%'\\n    // string public constant INVALID_EARLY_ACCESS_PROPORTION = \\\"8\\\"; // 'Early access proportion must be smaller than 100%'\\n    // string public constant INVALID_TIME = \\\"9\\\"; // 'Open time must be smaller than close time, close time for whale must not be greater than open time for community and not be greater than TGE date'\\n    // string public constant INVALID_SIGNER = \\\"10\\\"; // 'Signer does not have the right to approve'\\n    // string public constant INVALID_CLAIMABLE_AMOUNT = \\\"11\\\"; // 'Claimable amount must be greater than 0'\\n    // string public constant NOT_IN_WHALE_LIST = \\\"12\\\"; // 'Investor must be in whale list'\\n    // string public constant NOT_IN_INVESTOR_LIST = \\\"13\\\"; // 'Investor must be in the list'\\n    // string public constant NOT_ENOUGH_ALLOWANCE = \\\"14\\\"; // 'Investor need to approve or permit pool for their token before invest'\\n    // string public constant NOT_FUNDED = \\\"15\\\"; // 'Collaborator need to fund enough IDO token'\\n    // string public constant ALREADY_CLAIM_TOTAL_AMOUNT = \\\"16\\\"; // 'User already claim all of their token'\\n    // string public constant TIME_OUT_TO_BUY_IDO_TOKEN = \\\"17\\\"; // 'Time out for investor to buy IDO token'\\n    // string public constant EXCEED_MAX_PURCHASE_AMOUNT_FOR_USER = \\\"18\\\"; // 'Investor can not buy exceed allocated amount'\\n    // string public constant EXCEED_TOTAL_RAISE_AMOUNT = \\\"19\\\"; // 'Investor can not buy exceed total IDO token raise amount'\\n    // string public constant EXCEED_MAX_PURCHASE_AMOUNT_FOR_KYC_USER = \\\"20\\\"; // 'Investor who already kyced can not buy exceed allocated amount for KYCed user'\\n    // string public constant EXCEED_MAX_PURCHASE_AMOUNT_FOR_NOT_KYC_USER = \\\"21\\\"; // 'Investor who not kyc can not buy exceed allocated amount for not KYC user'\\n    // string public constant EXCEED_MAX_PURCHASE_AMOUNT_FOR_EARLY_ACCESS = \\\"22\\\"; // 'Investor can not buy exceed allocated amount for early access'\\n    // string public constant NOT_ALLOWED_TO_CLAIM_IDO_TOKEN = \\\"23\\\"; // 'Need admin's allowance to claim IDO token'\\n    // string public constant NOT_ALLOWED_TO_CLAIM_TOKEN_FEE = \\\"24\\\"; // 'Admin can claim only one single time'\\n    // string public constant NOT_ALLOWED_TO_DO_AFTER_TGE_DATE = \\\"25\\\"; // 'User must execute before TGE Date'\\n    // string public constant NOT_ALLOWED_TO_CLAIM_PARTICIPATION_FEE = \\\"26\\\"; // 'Admin can claim only one single time'\\n    // string public constant NOT_ALLOWED_TO_WITHDRAW_PURCHASED_AMOUNT = \\\"27\\\"; // 'Investor can withdraw their purchased amount if project failed and only one single time'\\n    // string public constant NOT_ALLOWED_TO_FUND_AFTER_TGE_DATE = \\\"28\\\"; // 'Collaborator must fund IDO token before TGE date'\\n    // string public constant NOT_ALLOWED_TO_ALLOW_INVESTOR_TO_CLAIM = \\\"29\\\"; // 'Admin can set claimable status to true if project success'\\n    // string public constant NOT_ALLOWED_TO_CLAIM_PURCHASE_TOKEN = \\\"30\\\"; // 'Collaborator can only claim fund (which exclude token fee) when project successes'\\n    // string public constant NOT_ALLOWED_TO_TRANSFER_BEFORE_TGE_DATE = \\\"31\\\"; // 'User can only claim or withdraw after TGE date'\\n    // string public constant NOT_ALLOWED_TO_TRANSFER_BEFORE_LOCKUP_TIME = \\\"32\\\"; // 'Admin can only claim token fee, participation fee; collaborator can only claim fund after lockup time'\\n    // string public constant NOT_ALLOWED_TO_DO_AFTER_EMERGENCY_CANCELLED = \\\"33\\\"; // 'Collaborator can withdraw redundant IDO token only,claim fund; admin can only claim token fee, participation fee if project is not emergency cancelled'\\n    // string public constant NOT_ALLOWED_TO_CANCEL_AFTER_LOCKUP_TIME = \\\"34\\\"; // 'Admin can only cancel pool before lockup time'\\n    // string public constant NOT_ALLOWED_TO_EXCEED_TOTAL_RAISE_AMOUNT = \\\"35\\\"; // Total Purchased Amount can't exceeds total raise amount\\n    // string public constant NOT_ALLOWED_TO_FUND_BEFORE_COMMUNITY_TIME = \\\"36\\\"; // Not allow to fund IDO token before Community Close Time\\n    // string public constant GALAXY_PARTICIPATION_FEE_PERCENTAGE_NOT_IN_THE_RANGE = \\\"37\\\";\\n    // string public constant CROWN_FUNDING_PARTICIPATION_FEE_PERCENTAGE_NOT_IN_THE_RANGE = \\\"38\\\";\\n    // string public constant NOT_ALLOWED_TO_ADJUST_TGE_DATE_EXCEEDS_ATTEMPTS = \\\"39\\\";\\n    // string public constant MAX_PURCHASE_FOR_KYC_USER_NOT_VALID = \\\"40\\\";\\n    // string public constant POOL_IS_ALREADY_FUNDED = \\\"41\\\";\\n    // string public constant NOT_ALLOWED_TO_ADJUST_TGE_DATE_TOO_FAR= \\\"42\\\";\\n    // string public constant ALREADY_PRIVATE_FUNDED=\\\"43\\\";\\n}\\n\",\"keccak256\":\"0x81107692558c8634b5da18a13e54d026725d0ae5e7184e0ad35f9d731df75a00\",\"license\":\"MIT\"},\"contracts/logics/PoolLogic.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity 0.8.23;\\n\\nimport {Errors} from \\\"../helpers/Errors.sol\\\";\\n\\nlibrary PoolLogic {\\n    /// @dev Percentage denominator\\n    uint16 public constant PERCENTAGE_DENOMINATOR = 10000;\\n\\n    enum PoolType {\\n        GALAXY_POOL,\\n        EARLY_ACCESS,\\n        NORMAL_ACCESS\\n    }\\n\\n    /**\\n     * @dev Calculate fee when investor buy token\\n     * @param _purchaseAmount Purchase amount of investor\\n     * @param _participationFeePercentage Fee percentage when buying token\\n     * @return Return amount of fee when investor buy token\\n     */\\n    function calculateParticipantFee(\\n        uint _purchaseAmount,\\n        uint _participationFeePercentage\\n    ) external pure returns (uint) {\\n        if (_participationFeePercentage == 0) return 0;\\n        return\\n            (_purchaseAmount * _participationFeePercentage) /\\n            PERCENTAGE_DENOMINATOR;\\n    }\\n\\n    /**\\n     * @dev Check whether or not an amount greater than 0\\n     * @param _amount An amount\\n     */\\n    function validAmount(uint _amount) public pure {\\n        // require(_amount > 0, Errors.ZERO_AMOUNT_NOT_VALID);\\n        if (_amount == 0) {\\n            revert Errors.ZeroAmountNotValid();\\n        }\\n    }\\n\\n    /**\\n     * @dev Check whether or not an address is zero address\\n     * @param _address An address\\n     */\\n    function validAddress(address _address) public pure {\\n        // require(_address != address(0), Errors.ZERO_ADDRESS_NOT_VALID);\\n        if (_address == address(0)) {\\n            revert Errors.ZeroAddressNotValid();\\n        }\\n    }\\n\\n    /**\\n     * @dev verify information of pool\\n     * @param addrs Array of address includes:\\n     * - address of IDO token,\\n     * - address of purchase token\\n     * @param uints Array of pool information includes:\\n     * - max purchase amount for KYC user,\\n     * - max purchase amount for Not KYC user,\\n     * - token fee percentage,\\n     * - galaxy participation fee percentage,\\n     * - crowdfunding participation fee percentage,\\n     * - galaxy pool proportion,\\n     * - early access proportion,\\n     * - total raise amount,\\n     * - whale open time,\\n     * - whale duration,\\n     * - community duration,\\n     * - rate of IDO token (based on README formula),\\n     * - decimal of IDO token (based on README formula, is different from decimals in contract of IDO token),\\n     * - TGE date,\\n     * - TGE percentage,\\n     * - vesting cliff,\\n     * - vesting frequency,\\n     * - number of vesting release\\n     */\\n    function verifyPoolInfo(\\n        address[2] memory addrs,\\n        uint[18] memory uints\\n    ) external pure {\\n        validAddress(addrs[1]); // purchaseToken\\n\\n        // tokenFeePercentage\\n        // require(\\n        //     uints[2] <= PERCENTAGE_DENOMINATOR,\\n        //     Errors.INVALID_TOKEN_FEE_PERCENTAGE\\n        // );\\n        if (uints[2] > PERCENTAGE_DENOMINATOR) {\\n            revert Errors.InvalidTokenFeePercentage();\\n        }\\n\\n        // galaxyPoolProportion\\n        validAmount(uints[5]);\\n        // require(\\n        //     uints[5] < PERCENTAGE_DENOMINATOR,\\n        //     Errors.INVALID_GALAXY_POOL_PROPORTION\\n        // );\\n        if (uints[5] >= PERCENTAGE_DENOMINATOR) {\\n            revert Errors.InvalidGalaxyPoolProportion();\\n        }\\n\\n        // earlyAccessProportion\\n        // require(\\n        //     uints[6] < PERCENTAGE_DENOMINATOR,\\n        //     Errors.INVALID_EARLY_ACCESS_PROPORTION\\n        // );\\n        if (uints[6] >= PERCENTAGE_DENOMINATOR) {\\n            revert Errors.InvalidEarlyAccessProportion();\\n        }\\n\\n        // require(\\n        //     uints[8]+uints[9]+uints[10] <= uints[13],\\n        //     Errors.INVALID_TIME\\n        // );\\n        if (uints[8]+uints[9]+uints[10] > uints[13]) {\\n            revert Errors.InvalidTime();\\n        }\\n\\n        // totalRaiseAmount\\n        validAmount(uints[7]);\\n    }\\n}\\n\",\"keccak256\":\"0x3009a506c441e9c24f78f4b9df2b28c2328c7d7163e60829914d7e861cfb993a\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x61047661003a600b82828239805160001a60731461002d57634e487b7160e01b600052600060045260246000fd5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600436106100615760003560e01c80635c1c862114610066578063749a979a1461007b578063a77559421461008e578063b3cd4254146100b4578063b95f0a63146100d0575b600080fd5b610079610074366004610268565b6100e3565b005b610079610089366004610283565b61010d565b6100a161009c36600461029c565b61012e565b6040519081526020015b60405180910390f35b6100bd61271081565b60405161ffff90911681526020016100ab565b6100796100de366004610327565b610160565b6001600160a01b03811661010a57604051633bf95ba760e01b815260040160405180910390fd5b50565b8060000361010a57604051631a30ee4d60e11b815260040160405180910390fd5b6000816000036101405750600061015a565b61271061014d83856103f4565b610157919061040b565b90505b92915050565b602082015161016e906100e3565b60408101516127101015610195576040516384a9b02960e01b815260040160405180910390fd5b6101a68160055b602002015161010d565b60a0810151612710116101cc5760405163cd3445ed60e01b815260040160405180910390fd5b60c0810151612710116101f25760405163392fb6bb60e11b815260040160405180910390fd5b6101a0810151610140820151610120830151610100840151610214919061042d565b61021e919061042d565b111561023d576040516337bf561360e11b815260040160405180910390fd5b61024881600761019c565b5050565b80356001600160a01b038116811461026357600080fd5b919050565b60006020828403121561027a57600080fd5b6101578261024c565b60006020828403121561029557600080fd5b5035919050565b600080604083850312156102af57600080fd5b50508035926020909101359150565b6040805190810167ffffffffffffffff811182821017156102ef57634e487b7160e01b600052604160045260246000fd5b60405290565b604051610240810167ffffffffffffffff811182821017156102ef57634e487b7160e01b600052604160045260246000fd5b60008061028080848603121561033c57600080fd5b84601f85011261034b57600080fd5b6103536102be565b80604086018781111561036557600080fd5b865b81811015610386576103788161024c565b845260209384019301610367565b5081955087605f88011261039957600080fd5b6103a16102f5565b938701939250829150878411156103b757600080fd5b5b838110156103d05780358352602092830192016103b8565b508093505050509250929050565b634e487b7160e01b600052601160045260246000fd5b808202811582820484141761015a5761015a6103de565b60008261042857634e487b7160e01b600052601260045260246000fd5b500490565b8082018082111561015a5761015a6103de56fea2646970667358221220fdd2b6b5be79cf0b7a02b14901f61f5386f7553b64b2d684f82d417b41649c9764736f6c63430008170033",
+  "deployedBytecode": "0x73000000000000000000000000000000000000000030146080604052600436106100615760003560e01c80635c1c862114610066578063749a979a1461007b578063a77559421461008e578063b3cd4254146100b4578063b95f0a63146100d0575b600080fd5b610079610074366004610268565b6100e3565b005b610079610089366004610283565b61010d565b6100a161009c36600461029c565b61012e565b6040519081526020015b60405180910390f35b6100bd61271081565b60405161ffff90911681526020016100ab565b6100796100de366004610327565b610160565b6001600160a01b03811661010a57604051633bf95ba760e01b815260040160405180910390fd5b50565b8060000361010a57604051631a30ee4d60e11b815260040160405180910390fd5b6000816000036101405750600061015a565b61271061014d83856103f4565b610157919061040b565b90505b92915050565b602082015161016e906100e3565b60408101516127101015610195576040516384a9b02960e01b815260040160405180910390fd5b6101a68160055b602002015161010d565b60a0810151612710116101cc5760405163cd3445ed60e01b815260040160405180910390fd5b60c0810151612710116101f25760405163392fb6bb60e11b815260040160405180910390fd5b6101a0810151610140820151610120830151610100840151610214919061042d565b61021e919061042d565b111561023d576040516337bf561360e11b815260040160405180910390fd5b61024881600761019c565b5050565b80356001600160a01b038116811461026357600080fd5b919050565b60006020828403121561027a57600080fd5b6101578261024c565b60006020828403121561029557600080fd5b5035919050565b600080604083850312156102af57600080fd5b50508035926020909101359150565b6040805190810167ffffffffffffffff811182821017156102ef57634e487b7160e01b600052604160045260246000fd5b60405290565b604051610240810167ffffffffffffffff811182821017156102ef57634e487b7160e01b600052604160045260246000fd5b60008061028080848603121561033c57600080fd5b84601f85011261034b57600080fd5b6103536102be565b80604086018781111561036557600080fd5b865b81811015610386576103788161024c565b845260209384019301610367565b5081955087605f88011261039957600080fd5b6103a16102f5565b938701939250829150878411156103b757600080fd5b5b838110156103d05780358352602092830192016103b8565b508093505050509250929050565b634e487b7160e01b600052601160045260246000fd5b808202811582820484141761015a5761015a6103de565b60008261042857634e487b7160e01b600052601260045260246000fd5b500490565b8082018082111561015a5761015a6103de56fea2646970667358221220fdd2b6b5be79cf0b7a02b14901f61f5386f7553b64b2d684f82d417b41649c9764736f6c63430008170033",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {
+      "calculateParticipantFee(uint256,uint256)": {
+        "details": "Calculate fee when investor buy token",
+        "params": {
+          "_participationFeePercentage": "Fee percentage when buying token",
+          "_purchaseAmount": "Purchase amount of investor"
+        },
+        "returns": {
+          "_0": "Return amount of fee when investor buy token"
+        }
+      },
+      "validAddress(address)": {
+        "details": "Check whether or not an address is zero address",
+        "params": {
+          "_address": "An address"
+        }
+      },
+      "validAmount(uint256)": {
+        "details": "Check whether or not an amount greater than 0",
+        "params": {
+          "_amount": "An amount"
+        }
+      },
+      "verifyPoolInfo(address[2],uint256[18])": {
+        "details": "verify information of pool",
+        "params": {
+          "addrs": "Array of address includes: - address of IDO token, - address of purchase token",
+          "uints": "Array of pool information includes: - max purchase amount for KYC user, - max purchase amount for Not KYC user, - token fee percentage, - galaxy participation fee percentage, - crowdfunding participation fee percentage, - galaxy pool proportion, - early access proportion, - total raise amount, - whale open time, - whale duration, - community duration, - rate of IDO token (based on README formula), - decimal of IDO token (based on README formula, is different from decimals in contract of IDO token), - TGE date, - TGE percentage, - vesting cliff, - vesting frequency, - number of vesting release"
+        }
+      }
+    },
+    "stateVariables": {
+      "PERCENTAGE_DENOMINATOR": {
+        "details": "Percentage denominator"
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [],
+    "types": null
+  }
+}
